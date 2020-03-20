@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:drawable/screen_background_dark_transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+    tools:context=".Super.SuperDetailTourFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardCornerRadius="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/txDetailT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Detail"
+                android:textColor="@color/blackTextColor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/idDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/txDetailT"
+                android:text="(02)"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/div"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/txDetailT"
+                android:layout_marginVertical="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <ImageButton
+                android:id="@+id/imv_tour"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@id/div"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintHorizontal_bias="0.5"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imvDetailTour"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignLeft="@id/imv_tour"
+                android:layout_alignEnd="@id/imv_tour"
+                android:layout_alignBottom="@id/imv_tour"
+                android:src="@mipmap/ic_launcher" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TourName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imvDetailTour"
+                android:layout_marginTop="10dp"
+                android:enabled="false"
+                app:boxBackgroundColor="@color/text_input_color"
+                app:boxCornerRadiusBottomEnd="13dp"
+                app:boxCornerRadiusBottomStart="13dp"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:boxCornerRadiusTopStart="13dp"
+                app:boxStrokeColor="#fff">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txTourName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ID"
+                    android:text="Text"
+                    android:textColor="@color/contentTextColor"
+                    android:textColorHint="@color/contentTextColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txEventSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TourName"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:gravity="center|end"
+                android:textColor="@color/blackTextColor" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggle_button_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel_button_detail"
+                    style="@style/Widget.Shrine.Button.TextButton.Blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cancel"
+                    android:visibility="gone" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btTSubmit"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/rand_bisque"
+                    android:text="Update"
+                    android:visibility="gone"
+                    app:strokeColor="@color/rand_sandybrown" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btTUpdate"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="update" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btTDelete"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/rand_bisque"
+                    android:text="delete"
+                    app:strokeColor="@color/rand_sandybrown" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

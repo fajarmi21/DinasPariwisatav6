@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+googleServices.disableVersionCheck = true
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.polinema.android.kotlin.dinaspariwisatav6"
+        minSdkVersion 27
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = kotlin_version
+        targetCompatibility = kotlin_version
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    configurations.all {
+        exclude group: 'com.google.api.grpc', module: 'proto-google-common-protos'
+        exclude group: 'com.google.protobuf', module: 'protobuf-java'
+        exclude group: 'com.google.guava', module: 'guava-jdk5'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(":rupiahedittext")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0-alpha03'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.gms:play-services-plus:17.0.0'
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-firestore:21.4.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.diegodobelo.expandingview:expanding-view:0.9.4'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'gun0912.ted:tedpermission:2.2.3'
+    implementation 'com.cottacush:CurrencyEditText:0.0.6'
+    implementation 'com.aminography:primecalendar:1.2.15'
+    implementation 'com.aminography:primedatepicker:1.1.0'
+    implementation 'com.github.okdroid:checkablechipview:1.0.3'
+    implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
+    implementation 'com.rany.albeg.wein:spring-fab-menu:1.0.1'
+    implementation 'com.nex3z:toggle-button-group:1.2.0'
+}

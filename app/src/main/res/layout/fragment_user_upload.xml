@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+    tools:context=".User.UserUploadFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/rand_sandybrown"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/id_user"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            app:boxBackgroundColor="@color/rand_bisque"
+            app:boxCornerRadiusTopEnd="13dp"
+            app:boxCornerRadiusTopStart="13dp"
+            app:boxStrokeColor="#fff">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txaId_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="ID"
+                android:text="Text"
+                android:textColor="@color/contentTextColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/user_upload"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_user"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            app:boxBackgroundColor="@color/rand_bisque"
+            app:boxCornerRadiusTopEnd="13dp"
+            app:boxCornerRadiusTopStart="13dp"
+            app:boxStrokeColor="#fff">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txaUser_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="USER"
+                android:text="Text"
+                android:textColor="@color/contentTextColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/user_upload"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="-20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/txForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Form Input"
+                    android:textColor="@color/darkTextColor"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/txNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txForm"
+                    android:layout_alignBottom="@+id/txForm"
+                    android:layout_marginStart="3dp"
+                    android:layout_toRightOf="@+id/txForm"
+                    android:gravity="bottom|center"
+                    android:textStyle="italic" />
+
+                <Spinner
+                    android:id="@+id/spinnerDate"
+                    android:layout_width="110dp"
+                    android:layout_height="0dp"
+                    android:layout_alignTop="@id/txDate"
+                    android:layout_alignBottom="@id/txDate"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="#696969"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:id="@+id/txDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toLeftOf="@id/spinnerDate"
+                    android:text="xx-xx-xxxx"
+                    android:textColor="@color/darkTextColor"
+                    android:textStyle="italic" />
+
+                <View
+                    android:id="@+id/divider_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/txForm"
+                    android:layout_marginVertical="10dp"
+                    android:background="#C4BFBF" />
+
+                <ScrollView
+                    android:id="@+id/scView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/divider2_user"
+                    android:layout_below="@id/divider_user">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/LLspin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/border"
+                                tools:ignore="UselessParent">
+
+                                <Spinner
+                                    android:id="@+id/spinnerUser"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:backgroundTint="#696969"
+                                    android:overlapAnchor="false"
+                                    android:spinnerMode="dropdown" />
+
+                            </LinearLayout>
+
+                            <id.adiandrea.rupiahedittext.RupiahEditText
+                                android:id="@+id/txPengunjung"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@id/LLspin"
+                                android:drawableStart="@drawable/icback_visitor"
+                                android:drawablePadding="5dp"
+                                android:textSize="14dp" />
+
+                            <LinearLayout
+                                android:id="@+id/llpendapatan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/txPengunjung"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <id.adiandrea.rupiahedittext.RupiahEditText
+                                        android:id="@+id/txPendapatanD"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:drawableStart="@drawable/icback_income"
+                                        android:drawablePadding="5dp"
+                                        android:textSize="16dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <id.adiandrea.rupiahedittext.RupiahEditText
+                                        android:id="@+id/txPendapatanL"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:drawableStart="@drawable/icback_income"
+                                        android:drawablePadding="5dp"
+                                        android:textSize="14dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/UtxKeterangan"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_below="@id/llpendapatan"
+                                app:boxCornerRadiusBottomEnd="10dp"
+                                app:boxCornerRadiusBottomStart="10dp"
+                                app:boxCornerRadiusTopEnd="10dp"
+                                app:boxCornerRadiusTopStart="10dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/txKeterangan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:hint="Keterangan"
+                                    android:inputType="textMultiLine|text" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/UtxKeterangan"
+                                android:layout_marginTop="10dp"
+                                android:text="Upload File"
+                                android:textColor="@color/blackTextColor"
+                                android:textSize="15sp"
+                                android:textStyle="italic" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView3"
+                                android:layout_marginTop="5dp">
+
+                                <ImageButton
+                                    android:id="@+id/imv1"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_marginTop="8dp"
+                                    android:contentDescription="TODO"
+                                    app:layout_constraintEnd_toStartOf="@+id/imv2"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@mipmap/ic_launcher" />
+
+                                <ImageButton
+                                    android:id="@+id/imv2"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:contentDescription="TODO"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imv1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/imv1"
+                                    app:layout_constraintTop_toTopOf="@+id/imv1"
+                                    app:srcCompat="@mipmap/ic_launcher" />
+
+                                <ImageButton
+                                    android:id="@+id/imv3"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_marginTop="8dp"
+                                    android:contentDescription="TODO"
+                                    app:layout_constraintEnd_toStartOf="@+id/imv4"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imv1"
+                                    app:srcCompat="@mipmap/ic_launcher" />
+
+                                <ImageButton
+                                    android:id="@+id/imv4"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:contentDescription="TODO"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/imv3"
+                                    app:layout_constraintTop_toTopOf="@+id/imv3"
+                                    app:srcCompat="@mipmap/ic_launcher" />
+
+                                <ImageView
+                                    android:id="@+id/view1"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:contentDescription="TODO"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imv1"
+                                    app:layout_constraintEnd_toEndOf="@+id/imv1"
+                                    app:layout_constraintStart_toStartOf="@+id/imv1"
+                                    app:layout_constraintTop_toTopOf="@+id/imv1"
+                                    app:srcCompat="@mipmap/ic_launcher" />
+
+                                <ImageView
+                                    android:id="@+id/view2"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:contentDescription="TODO"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imv2"
+                                    app:layout_constraintEnd_toEndOf="@+id/imv2"
+                                    app:layout_constraintStart_toStartOf="@+id/imv2"
+                                    app:layout_constraintTop_toTopOf="@+id/imv2"
+                                    app:srcCompat="@mipmap/ic_launcher" />
+
+                                <ImageView
+                                    android:id="@+id/view3"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:contentDescription="TODO"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imv3"
+                                    app:layout_constraintEnd_toEndOf="@+id/imv3"
+                                    app:layout_constraintStart_toStartOf="@+id/imv3"
+                                    app:layout_constraintTop_toTopOf="@+id/imv3"
+                                    app:layout_constraintVertical_bias="0.526"
+                                    app:srcCompat="@mipmap/ic_launcher" />
+
+                                <ImageView
+                                    android:id="@+id/view4"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:contentDescription="TODO"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imv4"
+                                    app:layout_constraintEnd_toEndOf="@+id/imv4"
+                                    app:layout_constraintStart_toStartOf="@+id/imv4"
+                                    app:layout_constraintTop_toTopOf="@+id/imv4"
+                                    app:srcCompat="@mipmap/ic_launcher" />
+
+                                <Button
+                                    android:id="@+id/PilihVid"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="pilih video"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                                <VideoView
+                                    android:id="@+id/vivew"
+                                    android:layout_width="350dp"
+                                    android:layout_height="250dp"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/PilihVid" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <View
+                    android:id="@+id/divider2_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/btSubmit"
+                    android:layout_marginVertical="10dp"
+                    android:background="#C4BFBF" />
+
+                <Button
+                    android:id="@+id/btSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25dp"
+                    android:text="tambah" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

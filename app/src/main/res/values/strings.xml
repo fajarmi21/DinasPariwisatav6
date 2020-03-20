@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pariwisata Kota Kediri</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rationale_message">we need permission for write and read your <b>storage</b></string>
+
+    <string name="user">User</string>
+</resources>

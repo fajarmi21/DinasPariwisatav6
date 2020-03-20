@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:drawable/screen_background_dark_transparent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+    tools:context=".User.UserDetailListFragment">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="40dp"
+        app:cardCornerRadius="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp">
+
+            <TextView
+                android:id="@+id/txDetailDU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Detail"
+                android:textColor="@color/blackTextColor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/idDetailDU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/txDetailDU"
+                android:text="(02)"
+                android:textStyle="italic" />
+
+            <View
+                android:id="@+id/divDetDU"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/txDetailDU"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/llfirstDU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divDetDU"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/userDetailDU"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:startIconDrawable="@drawable/icback_user">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txuserDetailDU"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="AAA"
+                            android:textColor="@color/blackTextColor" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dateDetailDU"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:startIconDrawable="@drawable/icback_date">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txdateDetailDU"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="hint"
+                            android:textColor="@color/blackTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/destineDU"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llfirstDU"
+                android:enabled="false"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:startIconDrawable="@drawable/icback_destination">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txdestineDetailDU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="hint"
+                    android:textColor="@color/blackTextColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/LLspinDU"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_below="@id/llfirstDU"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:background="@drawable/border"-->
+<!--                android:visibility="invisible"-->
+<!--                tools:ignore="UselessParent">-->
+
+            <Spinner
+                android:id="@+id/spinner1DU"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@id/llfirstDU"
+                android:layout_alignBottom="@+id/destineDU"
+                android:backgroundTint="#ff0000"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:visibility="invisible"
+                android:layout_marginTop="7dp"/>
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/llsecondDU"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/destineDU"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="2">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+            <id.adiandrea.rupiahedittext.RupiahEditText
+                android:id="@+id/txvisitorDetailDU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/destineDU"
+                android:drawableStart="@drawable/icback_visitor"
+                android:drawablePadding="5dp"
+                android:enabled="false"/>
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:id="@+id/visitorDetailDU"-->
+<!--                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/destineDU"-->
+<!--                        android:enabled="false"-->
+<!--                        app:boxCornerRadiusBottomStart="10dp"-->
+<!--                        app:boxCornerRadiusTopStart="10dp"-->
+<!--                        app:startIconDrawable="@drawable/icback_visitor">-->
+
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:id="@+id/txvisitorDetail"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:inputType="textMultiLine|number"-->
+<!--                            android:singleLine="false"-->
+<!--                            android:digits="0123456789"-->
+<!--                            android:text="AAA"-->
+<!--                            android:textColor="@color/blackTextColor" />-->
+
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+            <id.adiandrea.rupiahedittext.RupiahEditText
+                android:id="@+id/txincomeDetailDU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txvisitorDetailDU"
+                android:drawableStart="@drawable/icback_income"
+                android:drawablePadding="5dp"
+                android:enabled="false"/>
+
+            <LinearLayout
+                android:id="@+id/llsecondDU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txvisitorDetailDU"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <id.adiandrea.rupiahedittext.RupiahEditText
+                        android:id="@+id/txincomeDDetailDU"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/icback_income"
+                        android:drawablePadding="5dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <id.adiandrea.rupiahedittext.RupiahEditText
+                        android:id="@+id/txincomeLDetailDU"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/icback_income"
+                        android:drawablePadding="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+<!--                    <com.google.android.material.textfield.TextInputLayout-->
+<!--                        android:id="@+id/incomeDetailDU"-->
+<!--                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@id/txvisitorDetailDU"-->
+<!--                        android:enabled="false"-->
+<!--                        app:boxCornerRadiusBottomEnd="10dp"-->
+<!--                        app:boxCornerRadiusTopEnd="10dp"-->
+<!--                        app:startIconDrawable="@drawable/icback_income">-->
+
+<!--                        <com.google.android.material.textfield.TextInputEditText-->
+<!--                            android:id="@+id/txincomeDetail"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:inputType="textMultiLine|number"-->
+<!--                            android:singleLine="false"-->
+<!--                            android:digits="0123456789"-->
+<!--                            android:text="text"-->
+<!--                            android:textColor="@color/blackTextColor" />-->
+<!--                    </com.google.android.material.textfield.TextInputLayout>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/noteDU"
+                android:layout_below="@id/txincomeDetailDU"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="1dp"
+                app:cardBackgroundColor="#B3AAAA" >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="10dp"
+                    android:layout_gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <androidx.core.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fillViewport="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <LinearLayout
+                                        android:id="@+id/cobaDU"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="100dp"
+                                        android:orientation="horizontal"
+                                        android:layout_marginBottom="5dp"
+                                        android:weightSum="2">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <TextView
+                                                    android:id="@+id/txIm1DU"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="01"
+                                                    android:textColor="@color/blackTextColor"
+                                                    android:textSize="18sp" />
+
+                                                <ImageButton
+                                                    android:id="@+id/imv1DU"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_toRightOf="@id/txIm1DU"
+                                                    android:background="@android:drawable/screen_background_light_transparent"
+                                                    android:visibility="gone"
+                                                    app:layout_constraintHorizontal_bias="0.5" />
+
+                                                <ImageView
+                                                    android:id="@+id/imvDet1DU"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_toRightOf="@id/txIm1DU"
+                                                    android:src="@drawable/ic_user" />
+                                            </RelativeLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <TextView
+                                                    android:id="@+id/txIm2DU"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="02"
+                                                    android:textColor="@color/blackTextColor"
+                                                    android:textSize="18sp" />
+
+                                                <ImageButton
+                                                    android:id="@+id/imv2DU"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_toRightOf="@id/txIm2DU"
+                                                    android:background="@android:drawable/screen_background_light_transparent"
+                                                    android:visibility="gone"
+                                                    app:layout_constraintHorizontal_bias="0.5" />
+
+                                                <ImageView
+                                                    android:id="@+id/imvDet2DU"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_toRightOf="@id/txIm2DU"
+                                                    android:src="@drawable/ic_user" />
+                                            </RelativeLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/coba2DU"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="100dp"
+                                        android:orientation="horizontal"
+                                        android:layout_below="@id/cobaDU"
+                                        android:layout_marginBottom="5dp"
+                                        android:weightSum="2">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <TextView
+                                                    android:id="@+id/txIm3DU"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="03"
+                                                    android:textColor="@color/blackTextColor"
+                                                    android:textSize="18sp" />
+
+                                                <ImageButton
+                                                    android:id="@+id/imv3DU"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_toRightOf="@id/txIm3DU"
+                                                    android:background="@android:drawable/screen_background_light_transparent"
+                                                    android:visibility="gone"
+                                                    app:layout_constraintHorizontal_bias="0.5" />
+
+                                                <ImageView
+                                                    android:id="@+id/imvDet3DU"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_toRightOf="@id/txIm3DU"
+                                                    android:src="@drawable/ic_user" />
+                                            </RelativeLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <TextView
+                                                    android:id="@+id/txIm4DU"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="04"
+                                                    android:textColor="@color/blackTextColor"
+                                                    android:textSize="18sp" />
+
+                                                <ImageButton
+                                                    android:id="@+id/imv4DU"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_toRightOf="@id/txIm4DU"
+                                                    android:background="@android:drawable/screen_background_light_transparent"
+                                                    android:visibility="gone"
+                                                    app:layout_constraintHorizontal_bias="0.5" />
+
+                                                <ImageView
+                                                    android:id="@+id/imvDet4DU"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_toRightOf="@id/txIm4DU"
+                                                    android:src="@drawable/ic_user" />
+                                            </RelativeLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/coba3DU"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="250dp"
+                                        android:layout_below="@id/coba2DU"
+                                        android:layout_alignParentBottom="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <com.google.android.material.button.MaterialButton
+                                            style="@style/Widget.Shrine.Button.TextButton.Blue"
+                                            android:id="@+id/PilihVidDU"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="pilih video"
+                                            android:visibility="gone"/>
+
+                                        <VideoView
+                                            android:id="@+id/vivDetailDU"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent" />
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </androidx.core.widget.NestedScrollView>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/noteDU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tgDetailTourDU"
+                android:layout_alignBottom="@id/tgDetailTourDU"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="*U = User, A = Admin"
+                android:textStyle="italic" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/tgDetailTourDU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel_button_detailADU"
+                    style="@style/Widget.Shrine.Button.TextButton.Blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cancel"
+                    android:visibility="gone" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btTSubmitADU"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/rand_bisque"
+                    android:text="Update"
+                    android:visibility="gone"
+                    app:strokeColor="@color/rand_sandybrown" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btTUpdateADU"
+                    style="@style/Widget.Shrine.Button.TextButton.Blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="update" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btTDeleteADU"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/rand_bisque"
+                    app:strokeColor="@color/rand_sandybrown"
+                    android:text="delete" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

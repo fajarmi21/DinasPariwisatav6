@@ -1,0 +1,4 @@
+include ':multisearchviewlib'
+include ':rupiahedittext'
+include ':app'
+rootProject.name='Dinas Pariwisata v6'
