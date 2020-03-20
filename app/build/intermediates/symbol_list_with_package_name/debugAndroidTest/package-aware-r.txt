@@ -1,0 +1,1 @@
+com.polinema.android.kotlin.dinaspariwisatav6.test
