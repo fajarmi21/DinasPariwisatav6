@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.aminography:primedatepicker:1.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/090b8b5ffb250d2361edfcc689256890/jetified-primedatepicker-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/090b8b5ffb250d2361edfcc689256890/jetified-primedatepicker-1.1.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.aminography/primedatepicker/1.1.0/30a7638e373146acbf709247f8d6e225d8abb026/primedatepicker-1.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.aminography/primedatepicker/1.1.0/86db1a231e315154bac48f78d4700ec39af5745/primedatepicker-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
