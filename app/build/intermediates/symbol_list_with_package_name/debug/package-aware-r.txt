@@ -1609,6 +1609,7 @@ drawable bg_circle
 drawable bg_label_checked
 drawable bg_label_unchecked
 drawable border
+drawable border2
 drawable bt_uiborder
 drawable bt_uisquare
 drawable btn_checkbox_checked_mtrl
@@ -1623,6 +1624,8 @@ drawable button_background
 drawable card_edge
 drawable ccv_tag_clear
 drawable circle
+drawable circle2
+drawable circle3
 drawable circlet
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -1956,6 +1959,7 @@ id content_from_badge
 id content_name_view
 id content_rating_stars
 id content_request_btn
+id content_request_btn2
 id content_to_address_1
 id content_to_address_2
 id content_to_badge
@@ -1966,6 +1970,7 @@ id cut
 id cv
 id cvAS
 id cvAT
+id cvDateSF
 id cvSChart
 id cvSF
 id cvSHome
@@ -2236,6 +2241,7 @@ id rl
 id rounded
 id row_index_key
 id rvAdminUpload
+id rvSF
 id rvSuperChart
 id rvUserLog
 id rvUserLogA
@@ -2370,6 +2376,7 @@ id txAPendapatan
 id txAPengunjung
 id txATour
 id txDate
+id txDateSF
 id txDetailA
 id txDetailDS
 id txDetailDU
@@ -2383,6 +2390,7 @@ id txEvent
 id txEventAD
 id txEventSD
 id txForm
+id txIdSF
 id txIm1
 id txIm1DS
 id txIm1DU
@@ -2411,6 +2419,9 @@ id txPendapatanD
 id txPendapatanE
 id txPendapatanL
 id txPengunjung
+id txPengunjungDSF
+id txPengunjungLSF
+id txPengunjungTSF
 id txSDName
 id txSTour
 id txSearchDate
@@ -2579,6 +2590,7 @@ layout activity_super_dashboard
 layout activity_super_filter
 layout activity_super_filter_cell
 layout activity_super_filter_cell_content_layout
+layout activity_super_filter_cell_rv
 layout activity_super_filter_cell_title_layout
 layout activity_super_main
 layout activity_super_user

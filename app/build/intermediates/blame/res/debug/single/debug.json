@@ -80,6 +80,10 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxhdpi\\menu_icon.png"
     },
     {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_super_filter_cell_rv.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\activity_super_filter_cell_rv.xml"
+    },
+    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
@@ -108,12 +112,20 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\super_upload_sub_item.xml"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_user_tour.xml.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\fragment_user_tour.xml"
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circle2.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable\\circle2.xml"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_super_filter.xml.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\activity_super_filter.xml"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_user_tour.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\fragment_user_tour.xml"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_head_image.png.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxhdpi\\head_image.png"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_edit.png.flat",
@@ -126,10 +138,6 @@
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_super_user.xml.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\fragment_super_user.xml"
-    },
-    {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_head_image.png.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxhdpi\\head_image.png"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_close_background.xml.flat",
@@ -202,6 +210,10 @@
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_admin_detail_tour.xml.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\fragment_admin_detail_tour.xml"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border2.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable\\border2.xml"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_crop_original.png.flat",
@@ -308,12 +320,12 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_edit.png"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_hdr.png.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-mdpi\\ic_action_hdr.png"
-    },
-    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_avatar.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxxhdpi\\avatar.png"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_hdr.png.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-mdpi\\ic_action_hdr.png"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -460,12 +472,12 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_colorize.png"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\anim_animkiri.xml.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\anim\\animkiri.xml"
-    },
-    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_colorize.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_colorize.png"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\anim_animkiri.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\anim\\animkiri.xml"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\menu_user_bottom.xml.flat",
@@ -504,12 +516,12 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\item_user_list.xml"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_super_tour.xml.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\fragment_super_tour.xml"
-    },
-    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_head_image.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxxhdpi\\head_image.png"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_super_tour.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\fragment_super_tour.xml"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_background.png.flat",
@@ -588,12 +600,12 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_tags_bk.xml.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable\\ic_tags_bk.xml"
-    },
-    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_image.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xhdpi\\image.png"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_tags_bk.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable\\ic_tags_bk.xml"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icback_graphic.png.flat",
@@ -620,12 +632,12 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\fragment_super_detail_tour.xml"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\anim_animkanan.xml.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\anim\\animkanan.xml"
-    },
-    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_from_to_purple.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxxhdpi\\from_to_purple.png"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\anim_animkanan.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\anim\\animkanan.xml"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_from_to_purple.png.flat",
@@ -648,12 +660,12 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\anim\\scrollkanan.xml"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_super_excel_sub_item.xml.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\super_excel_sub_item.xml"
-    },
-    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_menu_icon.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxxhdpi\\menu_icon.png"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_super_excel_sub_item.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\super_excel_sub_item.xml"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_profile_round.png.flat",
@@ -700,12 +712,12 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\fragment_admin_upload.xml"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_cloud.png.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-hdpi\\ic_action_cloud.png"
-    },
-    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icback_destination.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable\\icback_destination.png"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_cloud.png.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-hdpi\\ic_action_cloud.png"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_header_register.png.flat",
@@ -840,12 +852,12 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\fragment_super_upload.xml"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_done_black_24dp.xml.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable\\ic_done_black_24dp.xml"
-    },
-    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_stars.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-hdpi\\stars.png"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_done_black_24dp.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable\\ic_done_black_24dp.xml"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_selector_bg_radio_button.xml.flat",
@@ -896,12 +908,12 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-hdpi\\header.png"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_hdr.png.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_hdr.png"
-    },
-    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_image.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-mdpi\\image.png"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_hdr.png.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_hdr.png"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_edit.png.flat",
@@ -968,6 +980,10 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-mdpi\\arrow.png"
     },
     {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circle3.xml.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable\\circle3.xml"
+    },
+    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_user_profile.jpg.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable\\user_profile.jpg"
     },
@@ -976,12 +992,12 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\font\\muli_light.ttf"
     },
     {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_super_filter_cell_title_layout.xml.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\layout\\activity_super_filter_cell_title_layout.xml"
+    },
+    {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_edittext_bg.xml.flat",
@@ -1004,16 +1020,16 @@
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\menu\\super_chart_bottom.xml"
     },
     {
+        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_from_to_purple.png.flat",
+        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxhdpi\\from_to_purple.png"
+    },
+    {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_logofacebook.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xhdpi\\logofacebook.png"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_header_register.png.flat",
         "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-hdpi\\header_register.png"
-    },
-    {
-        "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_from_to_purple.png.flat",
-        "source": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\src\\main\\res\\drawable-xxhdpi\\from_to_purple.png"
     },
     {
         "merged": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",

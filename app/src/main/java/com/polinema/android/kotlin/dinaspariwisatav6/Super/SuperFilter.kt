@@ -3,6 +3,7 @@ package com.polinema.android.kotlin.dinaspariwisatav6.Super
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.text.Layout
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -13,22 +14,45 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.aminography.primecalendar.PrimeCalendar
+import com.aminography.primecalendar.common.CalendarFactory
+import com.aminography.primecalendar.common.CalendarType
+import com.aminography.primedatepicker.PickType
+import com.aminography.primedatepicker.fragment.PrimeDatePickerBottomSheet
 import com.github.okdroid.checkablechipview.CheckableChipView
 import com.google.android.material.appbar.AppBarLayout
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.nex3z.togglebuttongroup.ToggleButtonGroup
 import com.polinema.android.kotlin.dinaspariwisatav6.R
 import com.polinema.android.kotlin.dinaspariwisatav6.Super.Button.CustomCompoundButton
 import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.activity_super_filter.*
 import kotlinx.android.synthetic.main.activity_super_filter_cell_content_layout.*
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
-class SuperFilter : AppCompatActivity() {
+class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedListener {
+
+    private var datePicker: PrimeDatePickerBottomSheet? = null
+    private var startDate = ""
+    private var endDate = ""
+    lateinit var db: FirebaseFirestore
+    lateinit var storage: StorageReference
+    lateinit var recyclerPAdapter: RecyclerAdapterP
+    private var daftarRecycler = mutableListOf<HashMap<String, String>>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_super_filter)
+        db = FirebaseFirestore.getInstance()
+        storage = FirebaseStorage.getInstance().reference
+        recyclerPAdapter = RecyclerAdapterP(daftarRecycler)
         val t = findViewById<Toolbar>(R.id.toolbarS)
         setSupportActionBar(t)
         var isShow = true
@@ -52,6 +76,7 @@ class SuperFilter : AppCompatActivity() {
             Log.v("id", group_multi_radiobutton.checkedIds.toString())
         }
 
+        TodayF.isChecked = true
         rv()
     }
 
@@ -60,37 +85,6 @@ class SuperFilter : AppCompatActivity() {
         check()
         spin()
 //        radio()
-    }
-
-    private fun rv() {
-        // prepare elements to display
-        val items: ArrayList<Item> = Item().getTestingList() as ArrayList<Item>
-
-        // add custom btn handler to first list item
-
-        // add custom btn handler to first list item
-        items[0].setRequestBtnClickListener(View.OnClickListener {
-            Toast.makeText(this, "CUSTOM HANDLER FOR FIRST BUTTON", Toast.LENGTH_SHORT).show()
-        })
-
-        // create custom adapter that holds elements and their state (we need hold a id's of unfolded elements for reusable elements)
-        val adapter = ListAdapter(this, items)
-
-        // add default btn handler for each request btn on each item if custom handler not found
-        adapter.setDefaultRequestBtnClickListener(View.OnClickListener {
-            Toast.makeText(this, "DEFAULT HANDLER FOR ALL BUTTONS", Toast.LENGTH_SHORT).show()
-        })
-
-        // set elements to adapter
-        lvFilter.adapter = adapter
-
-        // set on click event listener to list view
-        lvFilter.onItemClickListener = AdapterView.OnItemClickListener { _, view, pos, _ -> // toggle clicked cell state
-//            ll_cell_content.visibility = View.VISIBLE
-            (view as FoldingCell).toggle(false)
-            // register in adapter that state for selected cell is toggled
-            adapter.registerToggle(pos)
-        }
     }
 
     @SuppressLint("ResourceType")
@@ -117,12 +111,57 @@ class SuperFilter : AppCompatActivity() {
         spinnerUserSF.adapter = adapter
     }
 
+    @SuppressLint("SimpleDateFormat")
     private fun check() {
+        cvDateSF.setOnClickListener {
+            val today = CalendarFactory.newInstance(CalendarType.CIVIL)
+            val pickType = PickType.RANGE_START
+            if (txDateSF.text.equals("----- Select Date Range -----")) {
+                datePicker = PrimeDatePickerBottomSheet.newInstance(
+                    currentDateCalendar = today,
+                    pickType = pickType
+                )
+            } else {
+                val sd = txDateSF.text.replaceRange(9, txDateSF.text.lastIndex, "")
+                val ed = txDateSF.text.replaceRange(0, 13, "")
+                Log.e("date1", sd.toString())
+//                Log.e("date11", SimpleDateFormat("yyyy").format(SimpleDateFormat("dd/MM/yyyy").parse(sd.toString())))
+//                Log.e("date12", SimpleDateFormat("M").format(SimpleDateFormat("dd/MM/yyyy").parse(sd.toString())))
+//                Log.e("date13", SimpleDateFormat("d").format(SimpleDateFormat("dd/MM/yyyy").parse(sd.toString())))
+                Log.e("date2", ed.toString())
+                val startPick = CalendarFactory.newInstance(CalendarType.CIVIL)
+                startPick.set(
+                    SimpleDateFormat("yyyy").format(SimpleDateFormat("dd/MM/yyyy").parse(sd.toString())).toInt(),
+                    SimpleDateFormat("M").format(SimpleDateFormat("dd/MM/yyyy").parse(sd.toString())).toInt() - 1,
+                    SimpleDateFormat("d").format(SimpleDateFormat("dd/MM/yyyy").parse(sd.toString())).toInt()
+                )
+                val endPick = CalendarFactory.newInstance(CalendarType.CIVIL)
+                endPick.set(
+                    SimpleDateFormat("yyyy").format(SimpleDateFormat("dd/MM/yyyy").parse(ed.toString())).toInt(),
+                    SimpleDateFormat("M").format(SimpleDateFormat("dd/MM/yyyy").parse(ed.toString())).toInt() - 1,
+                    SimpleDateFormat("d").format(SimpleDateFormat("dd/MM/yyyy").parse(ed.toString())).toInt()
+                )
+                datePicker = PrimeDatePickerBottomSheet.newInstance(
+                    currentDateCalendar = today,
+                    pickType = pickType,
+                    pickedRangeStartCalendar = startPick,
+                    pickedRangeEndCalendar = endPick
+                )
+            }
+            datePicker?.setOnDateSetListener(this)
+            datePicker?.show(this.supportFragmentManager, "PrimeDatePickerBottomSheet")
+            TodayF.isChecked = false
+            MonthF.isChecked = false
+            YearF.isChecked = false
+        }
+
         TodayF.onCheckedChangeListener = { view: CheckableChipView, isChecked: Boolean ->
             if (isChecked) {
                 Toast.makeText(this, "${view.text} checked: $isChecked", Toast.LENGTH_SHORT).show()
                 MonthF.isChecked = false
                 YearF.isChecked = false
+                txDateSF.text = "----- Select Date Range -----"
+                rv()
             }
         }
 
@@ -131,6 +170,8 @@ class SuperFilter : AppCompatActivity() {
                 Toast.makeText(this, "${view.text} checked: $isChecked", Toast.LENGTH_SHORT).show()
                 TodayF.isChecked = false
                 YearF.isChecked = false
+                txDateSF.text = "----- Select Date Range -----"
+                rv()
             }
         }
 
@@ -139,7 +180,37 @@ class SuperFilter : AppCompatActivity() {
                 Toast.makeText(this, "${view.text} checked: $isChecked", Toast.LENGTH_SHORT).show()
                 TodayF.isChecked = false
                 MonthF.isChecked = false
+                txDateSF.text = "----- Select Date Range -----"
+                rv()
             }
+        }
+    }
+
+    private fun rv() {
+        // prepare elements to display
+        val items: ArrayList<Item> = Item().getTestingList() as ArrayList<Item>
+
+        // add custom btn handler to first list item
+        items[0].setRequestBtnClickListener(View.OnClickListener {
+            Toast.makeText(this, "CUSTOM HANDLER FOR FIRST BUTTON", Toast.LENGTH_SHORT).show()
+        })
+
+        // create custom adapter that holds elements and their state (we need hold a id's of unfolded elements for reusable elements)
+        val adapter = ListAdapter(this, items)
+
+        // add default btn handler for each request btn on each item if custom handler not found
+        adapter.setDefaultRequestBtnClickListener(View.OnClickListener {
+            Toast.makeText(this, "DEFAULT HANDLER FOR ALL BUTTONS", Toast.LENGTH_SHORT).show()
+        })
+
+        // set elements to adapter
+        lvFilter.adapter = adapter
+
+        // set on click event listener to list view
+        lvFilter.onItemClickListener = AdapterView.OnItemClickListener { _, view, pos, _ -> // toggle clicked cell state
+            (view as FoldingCell).toggle(false)
+            // register in adapter that state for selected cell is toggled
+            adapter.registerToggle(pos)
         }
     }
 
@@ -165,31 +236,17 @@ class SuperFilter : AppCompatActivity() {
 
         fun getPrice(): String? { return price }
 
-        fun setPrice(price: String?) { this.price = price }
-
         fun getPledgePrice(): String? { return pledgePrice }
-
-        fun setPledgePrice(pledgePrice: String?) { this.pledgePrice = pledgePrice }
 
         fun getFromAddress(): String? { return fromAddress }
 
-        fun setFromAddress(fromAddress: String?) { this.fromAddress = fromAddress }
-
         fun getToAddress(): String? { return toAddress }
-
-        fun setToAddress(toAddress: String?) { this.toAddress = toAddress }
 
         fun getRequestsCount(): Int { return requestsCount }
 
-        fun setRequestsCount(requestsCount: Int) { this.requestsCount = requestsCount }
-
         fun getDate(): String? { return date }
 
-        fun setDate(date: String?) { this.date = date }
-
         fun getTime(): String? { return time }
-
-        fun setTime(time: String?) { this.time = time }
 
         fun getRequestBtnClickListener(): View.OnClickListener? { return requestBtnClickListener }
 
@@ -218,9 +275,22 @@ class SuperFilter : AppCompatActivity() {
             return result
         }
 
-        public fun getTestingList(): ArrayList<Item>? {
+        fun getTestingList(): ArrayList<Item>? {
             val items = ArrayList<Item>()
-            items.add(Item("$14","$270","W 79th St, NY, 10024","W 139th St, NY, 10030",3,"TODAY","05:10 PM"))
+            when {
+                TodayF.isChecked == true -> {
+                    items.add(Item("$14","$270","W 79th St, NY, 10024","W 139th St, NY, 10030",3,"TODAY","05:10 PM"))
+                }
+                MonthF.isChecked == true -> {
+                    items.add(Item("$14","$270","W 79th St, NY, 10024","W 139th St, NY, 10030",3,"MONTH","05:10 PM"))
+                    items.add(Item("$15","$271","W 79th St, NY, 10024","W 139th St, NY, 10030",4,"MONTH","05:11 PM"))
+                }
+                YearF.isChecked == true -> {
+                    items.add(Item("$14","$270","W 79th St, NY, 10024","W 139th St, NY, 10030",3,"YEAR","05:10 PM"))
+                    items.add(Item("$15","$271","W 79th St, NY, 10024","W 139th St, NY, 10030",4,"YEAR","05:11 PM"))
+                    items.add(Item("$16","$272","W 79th St, NY, 10024","W 139th St, NY, 10030",5,"YEAR","05:12 PM"))
+                }
+            }
 
             return items
         }
@@ -251,8 +321,10 @@ class SuperFilter : AppCompatActivity() {
                 viewHolder.fromAddress = cell.findViewById(R.id.title_from_address)
                 viewHolder.toAddress = cell.findViewById(R.id.title_to_address)
                 viewHolder.requestsCount = cell.findViewById(R.id.title_requests_count)
+                viewHolder.requestsCountContent = cell.findViewById(R.id.head_image_left_text)
                 viewHolder.pledgePrice = cell.findViewById(R.id.title_pledge)
                 viewHolder.contentRequestBtn = cell.findViewById(R.id.content_request_btn)
+                viewHolder.rvPengunjung = cell.findViewById(R.id.rvSF)
                 cell.tag = viewHolder
             } else {
                 // for existing cell set valid valid state(without animation)
@@ -273,7 +345,31 @@ class SuperFilter : AppCompatActivity() {
             viewHolder.fromAddress!!.text = item.getFromAddress()
             viewHolder.toAddress!!.text = item.getToAddress()
             viewHolder.requestsCount!!.text = java.lang.String.valueOf(item.getRequestsCount())
+            viewHolder.requestsCountContent!!.text = java.lang.String.valueOf(item.getRequestsCount())
             viewHolder.pledgePrice!!.text = item.getPledgePrice()
+
+            // bind data from selected element to recyclerP
+//            daftarRecycler.clear()
+//            for (i in 0 until 2) {
+//                if (i == 0) {
+//                    val hm = HashMap<String, String>()
+//                    hm.put("PengunjungD", "1")
+//                    hm.put("PengunjungL", "2")
+//                    hm.put("PengunjungT", "3")
+//                    daftarRecycler.add(hm)
+//                    recyclerPAdapter.notifyDataSetChanged()
+//                } else {
+//                    val hm = HashMap<String, String>()
+//                    hm.put("PengunjungD", java.lang.String.valueOf(item.getRequestsCount()))
+//                    hm.put("PengunjungL", java.lang.String.valueOf(item.getRequestsCount()))
+//                    hm.put("PengunjungT", (item.getRequestsCount() + item.getRequestsCount()).toString())
+//                    daftarRecycler.add(hm)
+//                    recyclerPAdapter.notifyDataSetChanged()
+//                }
+//            }
+//
+//            viewHolder.rvPengunjung!!.layoutManager = LinearLayoutManager(context)
+//            viewHolder.rvPengunjung!!.adapter = recyclerPAdapter
 
             // set custom btn handler for list item from that item
             if (item.getRequestBtnClickListener() != null) {
@@ -313,8 +409,69 @@ class SuperFilter : AppCompatActivity() {
             var fromAddress: TextView? = null
             var toAddress: TextView? = null
             var requestsCount: TextView? = null
+            var requestsCountContent: TextView? = null
             var date: TextView? = null
             var time: TextView? = null
+            var rvPengunjung: RecyclerView? = null
         }
+    }
+
+    inner class RecyclerAdapterP(val dataRecycler: List<HashMap<String, String>>) : RecyclerView.Adapter<RecyclerAdapterP.HolderRecycler>() {
+        inner class HolderRecycler(v: View) : RecyclerView.ViewHolder(v) {
+            val txId = v.findViewById<TextView>(R.id.txIdSF)
+            val txPengunjungD = v.findViewById<TextView>(R.id.txPengunjungDSF)
+            val txPengunjungL = v.findViewById<TextView>(R.id.txPengunjungLSF)
+            val txPengunjungT = v.findViewById<TextView>(R.id.txPengunjungTSF)
+        }
+
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderRecycler {
+            val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_super_filter_cell_rv, parent, false)
+            return HolderRecycler(v)
+        }
+
+        override fun getItemCount(): Int = dataRecycler.size
+
+        @SuppressLint("SetTextI18n", "ResourceAsColor")
+        override fun onBindViewHolder(holder: HolderRecycler, position: Int) {
+            val data = dataRecycler.get(position)
+            if (position == 0) {
+                holder.txPengunjungD.textAlignment = View.TEXT_ALIGNMENT_CENTER
+                holder.txPengunjungL.textAlignment = View.TEXT_ALIGNMENT_CENTER
+                holder.txPengunjungT.textAlignment = View.TEXT_ALIGNMENT_CENTER
+                holder.txPengunjungD.setTextColor(resources.getColor(R.color.blackTextColor))
+                holder.txPengunjungL.setTextColor(resources.getColor(R.color.blackTextColor))
+                holder.txPengunjungT.setTextColor(resources.getColor(R.color.blackTextColor))
+
+                holder.txId.text = "No."
+                holder.txPengunjungD.text = "Local"
+                holder.txPengunjungL.text = "Asing"
+                holder.txPengunjungT.text = "Total"
+            } else {
+                holder.txPengunjungD.setPadding(9,0,0,0)
+                holder.txPengunjungL.setPadding(9,0,0,0)
+                holder.txPengunjungT.setPadding(9,0,0,0)
+
+                holder.txId.text = "$position."
+                holder.txPengunjungD.text = data["PengunjungD"]
+                holder.txPengunjungL.text = data["PengunjungL"]
+                holder.txPengunjungT.text = data["PengunjungT"]
+            }
+        }
+    }
+
+    override fun onMultipleDaysPicked(multipleDays: List<PrimeCalendar>) {
+        TODO("Not yet implemented")
+    }
+
+    @SuppressLint("SetTextI18n", "SimpleDateFormat")
+    override fun onRangeDaysPicked(startDay: PrimeCalendar, endDay: PrimeCalendar) {
+        Toast.makeText(this, "From: ${startDay.longDateString}\nTo: ${endDay.longDateString}", Toast.LENGTH_LONG).show()
+        startDate = SimpleDateFormat("dd/MM/yyyy").format(SimpleDateFormat("yyyy/MM/dd").parse(startDay.shortDateString))
+        endDate = SimpleDateFormat("dd/MM/yyyy").format(SimpleDateFormat("yyyy/MM/dd").parse(endDay.shortDateString))
+        txDateSF.text = "$startDate - $endDate"
+    }
+
+    override fun onSingleDayPicked(singleDay: PrimeCalendar) {
+        TODO("Not yet implemented")
     }
 }

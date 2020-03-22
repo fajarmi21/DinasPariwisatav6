@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.rany.albeg.wein:spring-fab-menu:1.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/153956e0d05a034e5fad01cbee3dd639/jetified-spring-fab-menu-1.0.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/153956e0d05a034e5fad01cbee3dd639/jetified-spring-fab-menu-1.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c47baef4354789dc811f823ec975fe85/jetified-spring-fab-menu-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c47baef4354789dc811f823ec975fe85/jetified-spring-fab-menu-1.0.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rany.albeg.wein/spring-fab-menu/1.0.1/1396a079b87b4ff8defe999c1021fa8a2f346fb7/spring-fab-menu-1.0.1-javadoc.jar!/" />
