@@ -1786,6 +1786,7 @@ id META
 id MonthF
 id PilihVid
 id PilihVidDU
+id RLPSF
 id RL_header
 id RLs_header
 id RLs_headerT
@@ -2241,7 +2242,6 @@ id rl
 id rounded
 id row_index_key
 id rvAdminUpload
-id rvSF
 id rvSuperChart
 id rvUserLog
 id rvUserLogA
@@ -2590,7 +2590,7 @@ layout activity_super_dashboard
 layout activity_super_filter
 layout activity_super_filter_cell
 layout activity_super_filter_cell_content_layout
-layout activity_super_filter_cell_rv
+layout activity_super_filter_cell_lv
 layout activity_super_filter_cell_title_layout
 layout activity_super_main
 layout activity_super_user

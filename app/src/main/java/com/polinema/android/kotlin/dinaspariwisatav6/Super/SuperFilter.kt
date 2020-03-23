@@ -2,20 +2,16 @@ package com.polinema.android.kotlin.dinaspariwisatav6.Super
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Typeface
 import android.os.Bundle
 import android.text.Layout
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.aminography.primecalendar.PrimeCalendar
 import com.aminography.primecalendar.common.CalendarFactory
 import com.aminography.primecalendar.common.CalendarType
@@ -31,11 +27,9 @@ import com.polinema.android.kotlin.dinaspariwisatav6.R
 import com.polinema.android.kotlin.dinaspariwisatav6.Super.Button.CustomCompoundButton
 import com.ramotion.foldingcell.FoldingCell
 import kotlinx.android.synthetic.main.activity_super_filter.*
-import kotlinx.android.synthetic.main.activity_super_filter_cell_content_layout.*
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
 
 class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedListener {
 
@@ -44,15 +38,12 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
     private var endDate = ""
     lateinit var db: FirebaseFirestore
     lateinit var storage: StorageReference
-    lateinit var recyclerPAdapter: RecyclerAdapterP
-    private var daftarRecycler = mutableListOf<HashMap<String, String>>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_super_filter)
         db = FirebaseFirestore.getInstance()
         storage = FirebaseStorage.getInstance().reference
-        recyclerPAdapter = RecyclerAdapterP(daftarRecycler)
         val t = findViewById<Toolbar>(R.id.toolbarS)
         setSupportActionBar(t)
         var isShow = true
@@ -207,7 +198,8 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
         lvFilter.adapter = adapter
 
         // set on click event listener to list view
-        lvFilter.onItemClickListener = AdapterView.OnItemClickListener { _, view, pos, _ -> // toggle clicked cell state
+        lvFilter.onItemClickListener = AdapterView.OnItemClickListener { _, view, pos, _ ->
+            // toggle clicked cell state
             (view as FoldingCell).toggle(false)
             // register in adapter that state for selected cell is toggled
             adapter.registerToggle(pos)
@@ -222,9 +214,10 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
         private var requestsCount = 0
         private var date: String? = null
         private var time: String? = null
+        private var itemP: ArrayList<ItemP>? = null
         private var requestBtnClickListener: View.OnClickListener? = null
 
-        constructor(price: String, pledgePrice: String, fromAddress: String, toAddress: String, requestsCount: Int, date: String, time: String) : this() {
+        constructor(price: String, pledgePrice: String, fromAddress: String, toAddress: String, requestsCount: Int, date: String, time: String, itemP: ArrayList<ItemP>) : this() {
             this.price = price
             this.pledgePrice = pledgePrice
             this.fromAddress = fromAddress
@@ -232,6 +225,7 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
             this.requestsCount = requestsCount
             this.date = date
             this.time = time
+            this.itemP = itemP
         }
 
         fun getPrice(): String? { return price }
@@ -247,6 +241,8 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
         fun getDate(): String? { return date }
 
         fun getTime(): String? { return time }
+
+        fun getItemP():  ArrayList<ItemP>? { return itemP }
 
         fun getRequestBtnClickListener(): View.OnClickListener? { return requestBtnClickListener }
 
@@ -277,18 +273,25 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
 
         fun getTestingList(): ArrayList<Item>? {
             val items = ArrayList<Item>()
+            val itemsP = ArrayList<ItemP>()
             when {
                 TodayF.isChecked == true -> {
-                    items.add(Item("$14","$270","W 79th St, NY, 10024","W 139th St, NY, 10030",3,"TODAY","05:10 PM"))
+                    itemsP.add(ItemP("1","1","1"))
+                    items.add(Item("$14","$270","W 79th St, NY, 10024","W 139th St, NY, 10030",3,"TODAY","05:10 PM", itemsP))
                 }
                 MonthF.isChecked == true -> {
-                    items.add(Item("$14","$270","W 79th St, NY, 10024","W 139th St, NY, 10030",3,"MONTH","05:10 PM"))
-                    items.add(Item("$15","$271","W 79th St, NY, 10024","W 139th St, NY, 10030",4,"MONTH","05:11 PM"))
+                    itemsP.add(ItemP("2","2","2"))
+                    itemsP.add(ItemP("2","2","2"))
+                    items.add(Item("$14","$270","W 79th St, NY, 10024","W 139th St, NY, 10030",3,"MONTH","05:10 PM", itemsP))
+                    items.add(Item("$15","$271","W 79th St, NY, 10024","W 139th St, NY, 10030",4,"MONTH","05:11 PM", itemsP))
                 }
                 YearF.isChecked == true -> {
-                    items.add(Item("$14","$270","W 79th St, NY, 10024","W 139th St, NY, 10030",3,"YEAR","05:10 PM"))
-                    items.add(Item("$15","$271","W 79th St, NY, 10024","W 139th St, NY, 10030",4,"YEAR","05:11 PM"))
-                    items.add(Item("$16","$272","W 79th St, NY, 10024","W 139th St, NY, 10030",5,"YEAR","05:12 PM"))
+                    itemsP.add(ItemP("3","3","3"))
+                    itemsP.add(ItemP("3","3","3"))
+                    itemsP.add(ItemP("3","3","3"))
+                    items.add(Item("$14","$270","W 79th St, NY, 10024","W 139th St, NY, 10030",3,"YEAR","05:10 PM", itemsP))
+                    items.add(Item("$15","$271","W 79th St, NY, 10024","W 139th St, NY, 10030",4,"YEAR","05:11 PM", itemsP))
+                    items.add(Item("$16","$272","W 79th St, NY, 10024","W 139th St, NY, 10030",5,"YEAR","05:12 PM", itemsP))
                 }
             }
 
@@ -296,10 +299,13 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
         }
     }
 
+    inner class ItemP(val pengunjungD: String, val pengunjungL: String, val pengunjungT: String)
+
     inner class ListAdapter(context: Context, objects: List<Item?>) : ArrayAdapter<Item>(context, 0, objects) {
         private var unfoldedIndexes = HashSet<Int>()
         private var defaultRequestBtnClickListener: View.OnClickListener? = null
 
+        @SuppressLint("SetTextI18n")
         override fun getView(
             position: Int,
             convertView: View?,
@@ -317,14 +323,14 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
                 // binding view parts to view holder
                 viewHolder.price = cell.findViewById(R.id.title_price)
                 viewHolder.time = cell.findViewById(R.id.title_time_label)
-                viewHolder.date = cell.findViewById<TextView>(R.id.title_date_label)
+                viewHolder.date = cell.findViewById(R.id.title_date_label)
                 viewHolder.fromAddress = cell.findViewById(R.id.title_from_address)
                 viewHolder.toAddress = cell.findViewById(R.id.title_to_address)
                 viewHolder.requestsCount = cell.findViewById(R.id.title_requests_count)
                 viewHolder.requestsCountContent = cell.findViewById(R.id.head_image_left_text)
                 viewHolder.pledgePrice = cell.findViewById(R.id.title_pledge)
+                viewHolder.rl = cell.findViewById(R.id.RLPSF)
                 viewHolder.contentRequestBtn = cell.findViewById(R.id.content_request_btn)
-                viewHolder.rvPengunjung = cell.findViewById(R.id.rvSF)
                 cell.tag = viewHolder
             } else {
                 // for existing cell set valid valid state(without animation)
@@ -333,8 +339,7 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
                 } else {
                     cell.fold(true)
                 }
-                viewHolder =
-                    cell.tag as ViewHolder
+                viewHolder = cell.tag as ViewHolder
             }
             if (item == null) return cell
 
@@ -348,28 +353,87 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
             viewHolder.requestsCountContent!!.text = java.lang.String.valueOf(item.getRequestsCount())
             viewHolder.pledgePrice!!.text = item.getPledgePrice()
 
-            // bind data from selected element to recyclerP
-//            daftarRecycler.clear()
-//            for (i in 0 until 2) {
-//                if (i == 0) {
-//                    val hm = HashMap<String, String>()
-//                    hm.put("PengunjungD", "1")
-//                    hm.put("PengunjungL", "2")
-//                    hm.put("PengunjungT", "3")
-//                    daftarRecycler.add(hm)
-//                    recyclerPAdapter.notifyDataSetChanged()
-//                } else {
-//                    val hm = HashMap<String, String>()
-//                    hm.put("PengunjungD", java.lang.String.valueOf(item.getRequestsCount()))
-//                    hm.put("PengunjungL", java.lang.String.valueOf(item.getRequestsCount()))
-//                    hm.put("PengunjungT", (item.getRequestsCount() + item.getRequestsCount()).toString())
-//                    daftarRecycler.add(hm)
-//                    recyclerPAdapter.notifyDataSetChanged()
-//                }
-//            }
-//
-//            viewHolder.rvPengunjung!!.layoutManager = LinearLayoutManager(context)
-//            viewHolder.rvPengunjung!!.adapter = recyclerPAdapter
+            Log.e("itemP", item.getItemP()!!.get(0).pengunjungD)
+            try {
+                // bind data from selected element to view through view holder (Pengunjung)
+                val lv = LinearLayout(this@SuperFilter)
+                lv.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+                lv.orientation = LinearLayout.VERTICAL
+                lv.isBaselineAligned = false
+                run y@{
+                    for(it in 0..5) {
+                        if (it == 2) break
+                        Log.e("y", it.toString())
+                        viewHolder.rl!!.setOnClickListener {
+                            return@y
+                        }
+                    }
+                }
+                for (it in 0 until 3) {
+                    if (it == 2) break
+                    val lh = LinearLayout(this@SuperFilter)
+                    lh.layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    )
+                    lh.orientation = LinearLayout.HORIZONTAL
+                    lh.weightSum = 4.0f
+                    lh.isBaselineAligned = false
+                    (0 until 4).forEach { i ->
+                        val tx = TextView(this@SuperFilter)
+                        tx.apply {
+                            background = resources.getDrawable(R.drawable.border2)
+                            when {
+                                i == 0 && it != 0 -> {
+                                    layoutParams = LinearLayout.LayoutParams(
+                                        0,
+                                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                                        0.4f
+                                    )
+                                    textAlignment = View.TEXT_ALIGNMENT_CENTER
+                                    text = "$it."
+                                }
+                                it == 0 -> {
+                                    layoutParams = LinearLayout.LayoutParams(
+                                        0,
+                                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                                        1.2f
+                                    )
+                                    textAlignment = View.TEXT_ALIGNMENT_CENTER
+                                    setTypeface(typeface, Typeface.BOLD)
+                                    when (i) {
+                                        0 -> {
+                                            layoutParams = LinearLayout.LayoutParams(
+                                                0,
+                                                LinearLayout.LayoutParams.WRAP_CONTENT,
+                                                0.4f
+                                            )
+                                            text = "No."
+                                        }
+                                        1 -> text = "Local"
+                                        2 -> text = "Manca"
+                                        3 -> text = "Total"
+                                    }
+                                }
+                                else -> {
+                                    layoutParams = LinearLayout.LayoutParams(
+                                        0,
+                                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                                        1.2f
+                                    )
+                                    setPadding(5, 0, 0, 0)
+                                    text = "oke$it$i"
+                                }
+                            }
+                        }
+                        lh.addView(tx)
+                    }
+                    lv.addView(lh)
+                }
+                viewHolder.rl!!.addView(lv)
+            } catch (e : Exception) {
+                Log.e("ex", e.message)
+            }
 
             // set custom btn handler for list item from that item
             if (item.getRequestBtnClickListener() != null) {
@@ -378,6 +442,7 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
                 // (optionally) add "default" handler if no handler found in item
                 viewHolder.contentRequestBtn!!.setOnClickListener(defaultRequestBtnClickListener)
             }
+
             return cell
         }
 
@@ -385,13 +450,9 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
             if (unfoldedIndexes.contains(position)) registerFold(position) else registerUnfold(position)
         }
 
-        private fun registerFold(position: Int) {
-            unfoldedIndexes.remove(position)
-        }
+        private fun registerFold(position: Int) = unfoldedIndexes.remove(position)
 
-        private fun registerUnfold(position: Int) {
-            unfoldedIndexes.add(position)
-        }
+        private fun registerUnfold(position: Int) = unfoldedIndexes.add(position)
 
         fun getDefaultRequestBtnClickListener(): View.OnClickListener? {
             return defaultRequestBtnClickListener
@@ -412,50 +473,7 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
             var requestsCountContent: TextView? = null
             var date: TextView? = null
             var time: TextView? = null
-            var rvPengunjung: RecyclerView? = null
-        }
-    }
-
-    inner class RecyclerAdapterP(val dataRecycler: List<HashMap<String, String>>) : RecyclerView.Adapter<RecyclerAdapterP.HolderRecycler>() {
-        inner class HolderRecycler(v: View) : RecyclerView.ViewHolder(v) {
-            val txId = v.findViewById<TextView>(R.id.txIdSF)
-            val txPengunjungD = v.findViewById<TextView>(R.id.txPengunjungDSF)
-            val txPengunjungL = v.findViewById<TextView>(R.id.txPengunjungLSF)
-            val txPengunjungT = v.findViewById<TextView>(R.id.txPengunjungTSF)
-        }
-
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderRecycler {
-            val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_super_filter_cell_rv, parent, false)
-            return HolderRecycler(v)
-        }
-
-        override fun getItemCount(): Int = dataRecycler.size
-
-        @SuppressLint("SetTextI18n", "ResourceAsColor")
-        override fun onBindViewHolder(holder: HolderRecycler, position: Int) {
-            val data = dataRecycler.get(position)
-            if (position == 0) {
-                holder.txPengunjungD.textAlignment = View.TEXT_ALIGNMENT_CENTER
-                holder.txPengunjungL.textAlignment = View.TEXT_ALIGNMENT_CENTER
-                holder.txPengunjungT.textAlignment = View.TEXT_ALIGNMENT_CENTER
-                holder.txPengunjungD.setTextColor(resources.getColor(R.color.blackTextColor))
-                holder.txPengunjungL.setTextColor(resources.getColor(R.color.blackTextColor))
-                holder.txPengunjungT.setTextColor(resources.getColor(R.color.blackTextColor))
-
-                holder.txId.text = "No."
-                holder.txPengunjungD.text = "Local"
-                holder.txPengunjungL.text = "Asing"
-                holder.txPengunjungT.text = "Total"
-            } else {
-                holder.txPengunjungD.setPadding(9,0,0,0)
-                holder.txPengunjungL.setPadding(9,0,0,0)
-                holder.txPengunjungT.setPadding(9,0,0,0)
-
-                holder.txId.text = "$position."
-                holder.txPengunjungD.text = data["PengunjungD"]
-                holder.txPengunjungL.text = data["PengunjungL"]
-                holder.txPengunjungT.text = data["PengunjungT"]
-            }
+            var rl: RelativeLayout? = null
         }
     }
 

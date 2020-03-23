@@ -1,5 +1,6 @@
 package com.polinema.android.kotlin.dinaspariwisatav6.User
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.Paint
 import android.os.Bundle
@@ -24,6 +25,7 @@ import kotlinx.android.synthetic.main.fragment_user_tour.*
 import kotlinx.android.synthetic.main.fragment_user_tour.view.*
 import kotlinx.android.synthetic.main.fragment_user_upload.*
 import java.text.NumberFormat
+import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
@@ -70,6 +72,7 @@ class UserTourFragment : Fragment(){
         return date.toInt()
     }
 
+    @SuppressLint("SimpleDateFormat")
     private fun showData() {
         daftarTour.clear()
         db.collection("users").document(FirebaseAuth.getInstance().currentUser!!.uid).get()
@@ -91,13 +94,14 @@ class UserTourFragment : Fragment(){
 //                                        Log.e("date", now())
                                         val ary = doc2.get("file_tanggal") as ArrayList<*>
                                         when(ary[0]) {
-                                            "Today" -> if (ary[1] == LocalDate.now().format(DateTimeFormatter.ofPattern("dd - MM - yyyy"))) {
+                                            "Today" -> if (SimpleDateFormat("MM").format(
+                                                    SimpleDateFormat("dd - MM - yyyy").parse(ary[1].toString())) == LocalDate.now().format(DateTimeFormatter.ofPattern("MM"))) {
                                                 val arr = doc2.get("file_pendapatan") as ArrayList<*>
                                                 count += doc2.get("file_pengunjung").toString().toInt()
                                                 count2 += arr[2].toString().toInt()
                                                 Log.e("incomeeee", count2.toString())
                                             }
-                                            "Month" -> if (ary[1] == LocalDate.now().format(DateTimeFormatter.ofPattern("MM - yyyy"))) {
+                                            "Month" -> if (SimpleDateFormat("MM").format(SimpleDateFormat("MM - yyyy").parse(ary[1].toString())) == LocalDate.now().format(DateTimeFormatter.ofPattern("MM"))) {
                                                 val arr = doc2.get("file_pendapatan") as ArrayList<*>
                                                 count += doc2.get("file_pengunjung").toString().toInt()
                                                 count2 += arr[2].toString().toInt()

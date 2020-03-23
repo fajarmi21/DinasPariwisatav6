@@ -1,6 +1,7 @@
 package com.polinema.android.kotlin.dinaspariwisatav6.Admin
 
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
@@ -88,6 +89,7 @@ class AdminUploadFragment : Fragment() {
         return date.toInt()
     }
 
+    @SuppressLint("SimpleDateFormat")
     private fun showData() {
         daftarTour.clear()
         db.collection("tour").orderBy("nama", Query.Direction.ASCENDING).get()
@@ -105,13 +107,13 @@ class AdminUploadFragment : Fragment() {
                             for (doc2 in it2) {
                                 val ary = doc2.get("file_tanggal") as ArrayList<*>
                                 when(ary[0]) {
-                                    "Today" -> if (ary[1] == LocalDate.now().format(DateTimeFormatter.ofPattern("dd - MM - yyyy"))) {
+                                    "Today" -> if (SimpleDateFormat("MM").format(SimpleDateFormat("dd - MM - yyyy").parse(ary[1].toString())) == LocalDate.now().format(DateTimeFormatter.ofPattern("MM"))) {
                                         val arr = doc2.get("file_pendapatan") as ArrayList<*>
                                         count += doc2.get("file_pengunjung").toString().toInt()
                                         count2 += arr[2].toString().toInt()
                                         Log.e("incomeeee", count2.toString())
                                     }
-                                    "Month" -> if (ary[1] == LocalDate.now().format(DateTimeFormatter.ofPattern("MM - yyyy"))) {
+                                    "Month" -> if (SimpleDateFormat("MM").format(SimpleDateFormat("MM - yyyy").parse(ary[1].toString())) == LocalDate.now().format(DateTimeFormatter.ofPattern("MM"))) {
                                         val arr = doc2.get("file_pendapatan") as ArrayList<*>
                                         count += doc2.get("file_pengunjung").toString().toInt()
                                         count2 += arr[2].toString().toInt()

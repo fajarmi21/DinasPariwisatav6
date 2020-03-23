@@ -148,7 +148,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginBottom="5dp"
-                android:text="@string/sender_badge" />
+                android:text="USER" />
 
             <ImageView
                 android:id="@+id/content_avatar"
@@ -411,11 +411,27 @@
             android:src="@color/contentDividerLine" />
 
         <!-- list part -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvSF"
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:baselineAligned="false">-->
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rvSF"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+        <RelativeLayout
+            android:id="@+id/RLPSF"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"/>
+            android:layout_height="wrap_content"/>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/LLPSF"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:baselineAligned="false"-->
+<!--            android:orientation="vertical">-->
+<!--        </LinearLayout>-->
 
         <!-- request button -->
         <LinearLayout
