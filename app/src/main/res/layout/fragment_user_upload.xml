@@ -158,38 +158,14 @@
 
                             </LinearLayout>
 
-                            <id.adiandrea.rupiahedittext.RupiahEditText
-                                android:id="@+id/txPengunjung"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_below="@id/LLspin"
-                                android:drawableStart="@drawable/icback_visitor"
-                                android:drawablePadding="5dp"
-                                android:textSize="14dp" />
-
                             <LinearLayout
                                 android:id="@+id/llpendapatan"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/txPengunjung"
+                                android:layout_below="@id/LLspin"
                                 android:baselineAligned="false"
                                 android:orientation="horizontal"
                                 android:weightSum="2">
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:orientation="vertical">
-
-                                    <id.adiandrea.rupiahedittext.RupiahEditText
-                                        android:id="@+id/txPendapatanD"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:drawableStart="@drawable/icback_income"
-                                        android:drawablePadding="5dp"
-                                        android:textSize="16dp" />
-                                </LinearLayout>
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -197,22 +173,89 @@
                                     android:layout_weight="1"
                                     android:orientation="vertical">
 
-                                    <id.adiandrea.rupiahedittext.RupiahEditText
-                                        android:id="@+id/txPendapatanL"
+                                    <RelativeLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:drawableStart="@drawable/icback_income"
-                                        android:drawablePadding="5dp"
-                                        android:textSize="14dp" />
+                                        android:layout_height="match_parent">
+
+                                        <id.adiandrea.rupiahedittext.RupiahEditText
+                                            android:id="@+id/txPendapatanD"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:drawableStart="@drawable/lokal"
+                                            android:drawableEnd="@drawable/orang"
+                                            android:drawablePadding="5dp"
+                                            android:text="lokal"
+                                            android:textSize="16dp" />
+
+                                        <!--                                        <TextView-->
+                                        <!--                                            android:id="@+id/textView5"-->
+                                        <!--                                            android:layout_width="wrap_content"-->
+                                        <!--                                            android:layout_height="match_parent"-->
+                                        <!--                                            android:layout_alignTop="@id/txPendapatanD"-->
+                                        <!--                                            android:layout_alignBottom="@id/txPendapatanD"-->
+                                        <!--                                            android:layout_alignParentEnd="true"-->
+                                        <!--                                            android:gravity="center"-->
+                                        <!--                                            android:text="Orang" />-->
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <id.adiandrea.rupiahedittext.RupiahEditText
+                                            android:id="@+id/txPendapatanL"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:drawableStart="@drawable/turis"
+                                            android:drawableEnd="@drawable/orang"
+                                            android:drawablePadding="5dp"
+                                            android:textSize="14dp" />
+
+<!--                                        <TextView-->
+<!--                                            android:id="@+id/textView6"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:layout_alignTop="@id/txPendapatanL"-->
+<!--                                            android:layout_alignBottom="@id/txPendapatanL"-->
+<!--                                            android:layout_alignParentEnd="true"-->
+<!--                                            android:gravity="center"-->
+<!--                                            android:text="Orang" />-->
+                                    </RelativeLayout>
                                 </LinearLayout>
                             </LinearLayout>
+
+                            <id.adiandrea.rupiahedittext.RupiahEditText
+                                android:id="@+id/txPengunjung"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@id/llpendapatan"
+                                android:drawableStart="@drawable/icback_income"
+                                android:drawablePadding="5dp"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/UtxKeterangan"
+                                android:layout_marginTop="10dp"
+                                android:text="Upload File"
+                                android:textColor="@color/blackTextColor"
+                                android:textSize="15sp"
+                                android:textStyle="italic" />
 
                             <com.google.android.material.textfield.TextInputLayout
                                 android:id="@+id/UtxKeterangan"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="100dp"
-                                android:layout_below="@id/llpendapatan"
+                                android:layout_below="@id/txPengunjung"
                                 app:boxCornerRadiusBottomEnd="10dp"
                                 app:boxCornerRadiusBottomStart="10dp"
                                 app:boxCornerRadiusTopEnd="10dp"
@@ -226,17 +269,6 @@
                                     android:hint="Keterangan"
                                     android:inputType="textMultiLine|text" />
                             </com.google.android.material.textfield.TextInputLayout>
-
-                            <TextView
-                                android:id="@+id/textView3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/UtxKeterangan"
-                                android:layout_marginTop="10dp"
-                                android:text="Upload File"
-                                android:textColor="@color/blackTextColor"
-                                android:textSize="15sp"
-                                android:textStyle="italic" />
 
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
@@ -358,6 +390,12 @@
                                     app:layout_constraintTop_toBottomOf="@+id/PilihVid" />
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TextView" />
                         </RelativeLayout>
                     </LinearLayout>
                 </ScrollView>

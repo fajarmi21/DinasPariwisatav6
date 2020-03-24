@@ -23,10 +23,32 @@
             android:layout_marginVertical="20dp">
 
             <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:text="Update By :"
+                android:textColor="@color/blackTextColor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/textView5"
+                android:text="Tidak Di Ubah"
+                android:textColor="@color/blackTextColor" />
+
+            <TextView
                 android:id="@+id/txDetailDU"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView5"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/textView5"
                 android:text="Detail"
                 android:textColor="@color/blackTextColor"
                 android:textSize="18sp" />
@@ -35,7 +57,10 @@
                 android:id="@+id/idDetailDU"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
+                android:layout_below="@+id/textView5"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_toRightOf="@id/txDetailDU"
                 android:text="(02)"
                 android:textStyle="italic" />
@@ -171,8 +196,8 @@
                 android:id="@+id/txvisitorDetailDU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/destineDU"
-                android:drawableStart="@drawable/icback_visitor"
+                android:layout_below="@id/txincomeDetailDU"
+                android:drawableStart="@drawable/icback_income"
                 android:drawablePadding="5dp"
                 android:enabled="false"/>
 <!--                    <com.google.android.material.textfield.TextInputLayout-->
@@ -208,8 +233,8 @@
                 android:id="@+id/txincomeDetailDU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txvisitorDetailDU"
-                android:drawableStart="@drawable/icback_income"
+                android:layout_below="@id/destineDU"
+                android:drawableStart="@drawable/icback_visitor"
                 android:drawablePadding="5dp"
                 android:enabled="false"/>
 
@@ -217,7 +242,7 @@
                 android:id="@+id/llsecondDU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txvisitorDetailDU"
+                android:layout_below="@id/destineDU"
                 android:orientation="horizontal"
                 android:weightSum="2"
                 android:visibility="invisible">
@@ -231,7 +256,7 @@
                         android:id="@+id/txincomeDDetailDU"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/icback_income"
+                        android:drawableStart="@drawable/lokal"
                         android:drawablePadding="5dp"/>
                 </LinearLayout>
 
@@ -244,7 +269,7 @@
                         android:id="@+id/txincomeLDetailDU"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/icback_income"
+                        android:drawableStart="@drawable/turis"
                         android:drawablePadding="5dp"/>
                 </LinearLayout>
             </LinearLayout>
@@ -276,7 +301,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@id/noteDU"
-                android:layout_below="@id/txincomeDetailDU"
+                android:layout_below="@id/txvisitorDetailDU"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 app:cardCornerRadius="10dp"

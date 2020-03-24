@@ -145,8 +145,8 @@
                 android:id="@+id/txvisitorDetailDS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/spinner1DS"
-                android:drawableStart="@drawable/icback_visitor"
+                android:layout_below="@id/txincomeDetailDS"
+                android:drawableStart="@drawable/icback_income"
                 android:drawablePadding="5dp"
                 android:enabled="false"/>
 
@@ -154,16 +154,17 @@
                 android:id="@+id/txincomeDetailDS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txvisitorDetailDS"
-                android:drawableStart="@drawable/icback_income"
+                android:layout_below="@id/spinner1DS"
+                android:drawableStart="@drawable/icback_visitor"
+                android:drawableEnd="@drawable/orang"
                 android:drawablePadding="5dp"
-                android:enabled="false"/>
+                android:enabled="false" />
 
             <LinearLayout
                 android:id="@+id/llsecondDS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txvisitorDetailDS"
+                android:layout_below="@id/spinner1DS"
                 android:orientation="horizontal"
                 android:weightSum="2"
                 android:visibility="invisible">
@@ -173,12 +174,14 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
                     <id.adiandrea.rupiahedittext.RupiahEditText
                         android:id="@+id/txincomeDDetailDS"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/icback_income"
-                        android:drawablePadding="5dp"/>
+                        android:drawableStart="@drawable/lokal"
+                        android:drawableEnd="@drawable/orang"
+                        android:drawablePadding="5dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -186,12 +189,14 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
                     <id.adiandrea.rupiahedittext.RupiahEditText
                         android:id="@+id/txincomeLDetailDS"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/icback_income"
-                        android:drawablePadding="5dp"/>
+                        android:drawableStart="@drawable/turis"
+                        android:drawableEnd="@drawable/orang"
+                        android:drawablePadding="5dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -199,7 +204,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@id/noteDS"
-                android:layout_below="@id/llsecondDS"
+                android:layout_below="@id/txvisitorDetailDS"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 app:cardCornerRadius="10dp"

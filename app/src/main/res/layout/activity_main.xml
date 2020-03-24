@@ -16,13 +16,44 @@
         android:contentDescription="header"
         android:background="@drawable/header"/>
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="136dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="5dp"
+        app:srcCompat="@drawable/kotakediri" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="107dp"
+        android:layout_height="73dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="2dp"
+        android:layout_toStartOf="@+id/imageView7"
+        android:layout_toEndOf="@+id/imageView"
+        app:srcCompat="@drawable/harmoni" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="90dp"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="21dp"
+        app:srcCompat="@drawable/pesona" />
+
     <TextView
         android:id="@+id/tvDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="45dp"
-        android:text="Welcome to apps"
+        android:layout_marginTop="95dp"
+        android:text="Dinas Pariwisata"
         android:textColor="@color/colorWhite"
         android:textSize="17sp" />
 
@@ -35,7 +66,7 @@
         android:text="Login"
         android:transitionName="login"
         android:textColor="@color/colorWhite"
-        android:textSize="30sp"
+        android:textSize="28sp"
         android:textStyle="bold" />
 
     <ImageView

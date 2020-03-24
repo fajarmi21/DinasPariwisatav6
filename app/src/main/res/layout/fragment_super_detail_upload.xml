@@ -146,7 +146,7 @@
                         android:id="@+id/txincomeDDetailD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/icback_income"
+                        android:drawableStart="@drawable/lokal"
                         android:drawablePadding="5dp"
                         android:enabled="false"/>
                 </LinearLayout>
@@ -160,7 +160,7 @@
                         android:id="@+id/txincomeLDetailD"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/icback_income"
+                        android:drawableStart="@drawable/turis"
                         android:drawablePadding="5dp"
                         android:enabled="false"/>
                 </LinearLayout>
