@@ -9,8 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.gun0912.tedpermission.PermissionListener
-import com.gun0912.tedpermission.TedPermission
 import com.polinema.android.kotlin.dinaspariwisatav6.R
 import kotlinx.android.synthetic.main.activity_super_dashboard.*
 
@@ -33,7 +31,6 @@ class SuperDashboard : AppCompatActivity() {
         }
 
         cvSChart.setOnClickListener {
-//            Toast.makeText(this, "chart click", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, SuperFilter::class.java)
             startActivity(intent)
         }

@@ -4,7 +4,7 @@
             "outputFile": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\48237c4823afb7fdbb7a6dd169a84669\\core-1.3.0-alpha02\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\06eb29c9779a060495a252041b2497b7\\core-1.3.0-alpha02\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\a8561948a41dde3d29cb0fefbb235295\\appcompat-1.2.0-alpha03\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\3ce1e0d9605d29b7c280190ba9dc3b02\\appcompat-1.2.0-alpha03\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

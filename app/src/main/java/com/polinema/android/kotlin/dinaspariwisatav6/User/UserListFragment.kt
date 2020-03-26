@@ -140,7 +140,7 @@ class UserListFragment : Fragment() {
             holder.txNumber.text = (position + 1).toString()
             holder.txTempat.text = "${data.get("file_tempat")}"
             holder.txDate.text = data.get("file_tanggal")
-            holder.txPengunjung.text = "jumlah pengunjung : ${ribuan(data.get("file_pengunjung")!!.toInt())}"
+            holder.txPengunjung.text = "jumlah pengunjung : ${ribuan(data.get("income3")!!.toInt())}"
             holder.cv.setOnClickListener {
                 val fragment = UserDetailListFragment()
                 val bundle = Bundle()

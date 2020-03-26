@@ -32,44 +32,43 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="20dp">
-                        <LinearLayout
-                            android:id="@+id/LLUser"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="5dp">
-                            <com.nex3z.togglebuttongroup.MultiSelectToggleGroup
-                                android:id="@+id/group_multi_radiobutton"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                app:tbgChildSpacing="8dp">
-                                <com.polinema.android.kotlin.dinaspariwisatav6.Super.Button.CustomCompoundButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:paddingTop="8dp"
-                                    android:paddingBottom="8dp"
-                                    android:paddingLeft="16dp"
-                                    android:paddingRight="16dp"
-                                    android:text="lorem"/>
-                                <com.polinema.android.kotlin.dinaspariwisatav6.Super.Button.CustomCompoundButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
-                                    android:paddingTop="8dp"
-                                    android:paddingBottom="8dp"
-                                    android:paddingLeft="16dp"
-                                    android:paddingRight="16dp"
-                                    android:text="Oke"/>
-<!--                                <com.nex3z.togglebuttongroup.button.CircularToggle-->
-<!--                                    android:id="@+id/sun"-->
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/LLUser"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:layout_marginBottom="5dp">-->
+<!--                            <com.nex3z.togglebuttongroup.MultiSelectToggleGroup-->
+<!--                                android:id="@+id/group_multi_radiobutton"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                app:tbgChildSpacing="8dp">-->
+<!--                                <com.polinema.android.kotlin.dinaspariwisatav6.Super.Button.CustomCompoundButton-->
 <!--                                    android:layout_width="wrap_content"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:textSize="16sp"-->
-<!--                                    android:text="S"/>-->
+<!--                                    android:layout_height="40dp"-->
+<!--                                    android:paddingTop="8dp"-->
+<!--                                    android:paddingBottom="8dp"-->
+<!--                                    android:paddingLeft="16dp"-->
+<!--                                    android:paddingRight="16dp"-->
+<!--                                    android:text="lorem"/>-->
+<!--                                <com.polinema.android.kotlin.dinaspariwisatav6.Super.Button.CustomCompoundButton-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="40dp"-->
+<!--                                    android:paddingTop="8dp"-->
+<!--                                    android:paddingBottom="8dp"-->
+<!--                                    android:paddingLeft="16dp"-->
+<!--                                    android:paddingRight="16dp"-->
+<!--                                    android:text="Oke"/>-->
+<!--&lt;!&ndash;                                <com.nex3z.togglebuttongroup.button.CircularToggle&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:id="@+id/sun"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:textSize="16sp"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    android:text="S"/>&ndash;&gt;-->
 
-                            </com.nex3z.togglebuttongroup.MultiSelectToggleGroup>
-                        </LinearLayout>
+<!--                            </com.nex3z.togglebuttongroup.MultiSelectToggleGroup>-->
+<!--                        </LinearLayout>-->
                         <LinearLayout
-                            android:layout_below="@id/LLUser"
                             android:id="@+id/LLSF"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -143,7 +142,43 @@
                                 android:paddingVertical="5dp"
                                 android:text="----- Select Date Range -----"/>
                         </androidx.cardview.widget.CardView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@id/cvDateSF"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/tx1SFC"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@id/tx2SFC"
+                                android:text="5"
+                                android:textSize="20sp"
+                                android:textAlignment="center"
+                                android:background="@drawable/circle"
+                                android:layout_marginEnd="5dp" />
+                            <TextView
+                                android:id="@+id/tx2SFC"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@id/tx3SFC"
+                                android:text="10"
+                                android:textSize="20sp"
+                                android:textAlignment="center"
+                                android:background="@drawable/circle"
+                                android:layout_marginEnd="5dp"/>
+                            <TextView
+                                android:id="@+id/tx3SFC"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:text="15"
+                                android:textSize="20sp"
+                                android:textAlignment="center"
+                                android:background="@drawable/circle"/>
                         </RelativeLayout>
+                    </RelativeLayout>
                     </androidx.cardview.widget.CardView>
             </RelativeLayout>
 
@@ -159,21 +194,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        android:background="@drawable/background"
-        android:fillViewport="true">
-            <ListView
-                android:id="@+id/lvFilter"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:divider="@android:color/transparent"
-                android:dividerHeight="10dp"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:nestedScrollingEnabled="true"/>
+        android:background="@drawable/background">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFilter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+<!--            <ListView-->
+<!--                android:id="@+id/lvFilter"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:clipChildren="false"-->
+<!--                android:clipToPadding="false"-->
+<!--                android:divider="@android:color/transparent"-->
+<!--                android:dividerHeight="10dp"-->
+<!--                android:paddingBottom="@dimen/activity_vertical_margin"-->
+<!--                android:paddingLeft="@dimen/activity_horizontal_margin"-->
+<!--                android:paddingRight="@dimen/activity_horizontal_margin"-->
+<!--                android:paddingTop="@dimen/activity_vertical_margin"-->
+<!--                android:nestedScrollingEnabled="true"/>-->
     </androidx.core.widget.NestedScrollView>
 
     <com.rany.albeg.wein.springfabmenu.SpringFabMenu

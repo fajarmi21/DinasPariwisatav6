@@ -1658,6 +1658,7 @@ drawable fashion_trends_sample
 drawable from_to_purple
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable harmoni
 drawable head_image
 drawable header
 drawable header_register
@@ -1691,8 +1692,10 @@ drawable ic_home2
 drawable ic_house
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
+drawable ic_launcher
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_launcher_round
 drawable ic_lock
 drawable ic_maintenance
 drawable ic_menu_arrow_down_black_24dp
@@ -1728,7 +1731,9 @@ drawable icback_logout
 drawable icback_user
 drawable icback_visitor
 drawable image
+drawable kotakediri
 drawable logofacebook
+drawable lokal
 drawable menu_icon
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
@@ -1752,6 +1757,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable orang
+drawable pesona
 drawable product_image
 drawable profile_back_button
 drawable profile_bk
@@ -1766,6 +1773,7 @@ drawable stars
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable turis
 drawable tx_rounded
 drawable user_profile
 font muli
@@ -1780,7 +1788,6 @@ id CTRL
 id FUNCTION
 id LLPengunjungE
 id LLSF
-id LLUser
 id LLspin
 id META
 id MonthF
@@ -1972,6 +1979,8 @@ id cv
 id cvAS
 id cvAT
 id cvDateSF
+id cvItem2
+id cvItemF
 id cvSChart
 id cvSF
 id cvSHome
@@ -2041,7 +2050,6 @@ id ghost_view
 id ghost_view_holder
 id gone
 id group_divider
-id group_multi_radiobutton
 id groups
 id head_image
 id head_image_center_text
@@ -2066,10 +2074,13 @@ id idDetailU
 id id_user
 id ifRoom
 id image
+id imageView
 id imageView2
 id imageView3
 id imageView4
 id imageView5
+id imageView6
+id imageView7
 id imageViewAT
 id imageViewAU
 id imageViewS
@@ -2124,7 +2135,6 @@ id listUploadS
 id listUser
 id list_item
 id llPendapatanE
-id ll_cell_content
 id llfirst
 id llfirstDS
 id llfirstDU
@@ -2132,7 +2142,6 @@ id llpendapatan
 id llsecond
 id llsecondDS
 id llsecondDU
-id lvFilter
 id lv_name
 id lv_name_super
 id lv_user
@@ -2242,6 +2251,7 @@ id rl
 id rounded
 id row_index_key
 id rvAdminUpload
+id rvFilter
 id rvSuperChart
 id rvUserLog
 id rvUserLogA
@@ -2328,6 +2338,8 @@ id textView2
 id textView2_super
 id textView3
 id textView4
+id textView5
+id textView7
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -2372,6 +2384,9 @@ id tvLogin
 id tvPassword
 id tvUsername
 id tv_text
+id tx1SFC
+id tx2SFC
+id tx3SFC
 id txAPendapatan
 id txAPengunjung
 id txATour
@@ -2386,11 +2401,11 @@ id txEDPendapatan
 id txELPendapatan
 id txEPengunjung
 id txETPendapatan
+id txEditedBy
 id txEvent
 id txEventAD
 id txEventSD
 id txForm
-id txIdSF
 id txIm1
 id txIm1DS
 id txIm1DU
@@ -2419,9 +2434,6 @@ id txPendapatanD
 id txPendapatanE
 id txPendapatanL
 id txPengunjung
-id txPengunjungDSF
-id txPengunjungLSF
-id txPengunjungTSF
 id txSDName
 id txSTour
 id txSearchDate
@@ -2588,10 +2600,6 @@ layout activity_main
 layout activity_super_chart_main
 layout activity_super_dashboard
 layout activity_super_filter
-layout activity_super_filter_cell
-layout activity_super_filter_cell_content_layout
-layout activity_super_filter_cell_lv
-layout activity_super_filter_cell_title_layout
 layout activity_super_main
 layout activity_super_user
 layout activity_user_main
@@ -2642,6 +2650,7 @@ layout item_admin_log
 layout item_admin_search
 layout item_admin_upload
 layout item_admin_user
+layout item_super_filter
 layout item_super_tour
 layout item_super_upload
 layout item_super_user
@@ -2758,6 +2767,7 @@ string action_close
 string action_select
 string action_settings
 string action_today
+string android_animations_lib_name
 string app_name
 string appbar_scrolling_view_behavior
 string appbar_springfabmenu_behavior
@@ -2870,9 +2880,6 @@ string requests_count_mock
 string search_menu_title
 string sender_badge
 string status_bar_notification_info_overflow
-string tedpermission_close
-string tedpermission_confirm
-string tedpermission_setting
 string title_activity_main2
 string title_activity_profile
 string to_badge
@@ -3357,7 +3364,6 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
-style Theme_Transparent_Permission
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

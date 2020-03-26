@@ -110,8 +110,8 @@ class SuperUploadFragment : Fragment() {
             val data = dataUpload.get(position)
             holder.txUpload.text = data.get("upload")
             holder.txTanggal.text = data.get("tanggal")
-            holder.txPg.text = data.get("visitor")
-            holder.txPn.text = data.get("income3")
+            holder.txPg.text = data.get("income3")
+            holder.txPn.text = data.get("visitor")
             holder.card.setOnClickListener {
                 val fragment = SuperDetailUploadFragment()
                 val bundle = Bundle()

@@ -53,8 +53,6 @@ class SuperMain : AppCompatActivity() {
         setContentView(R.layout.activity_super_main)
         navigationS.setOnNavigationItemSelectedListener(mSelected)
         navigationS.selectedItemId = R.id.navigationHomeS
-//        Log.e("user", FirebaseAuth.getInstance().currentUser!!.email.toString())
-//        Log.e("user", FirebaseAuth.getInstance().toString())
     }
 
     private fun addFragment(fragment: Fragment) {

@@ -161,7 +161,7 @@ class AdminSearchFragment : Fragment() {
             holder.txNumber.text = (position + 1).toString()
             holder.txTempat.text = "${data.get("file_tempat")} (${data.get("file_nama")})"
             holder.txDate.text = data.get("file_tanggal")
-            holder.txPengunjung.text = "jumlah pengunjung : ${ribuan(data.get("file_pengunjung").toString().toInt())}"
+            holder.txPengunjung.text = "jumlah pengunjung : ${ribuan(data.get("income3").toString().toInt())}"
             holder.cv.setOnClickListener {
                 val fragment = AdminDetailSearchFragment()
                 val bundle = Bundle()

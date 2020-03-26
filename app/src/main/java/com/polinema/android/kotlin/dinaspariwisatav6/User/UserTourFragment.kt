@@ -161,14 +161,14 @@ class UserTourFragment : Fragment(){
     }
 
     private fun rupiah(number : Any?): String{
-        val localeID =  Locale("in", "ID")
-        val numberFormat = NumberFormat.getCurrencyInstance(localeID)
-        return numberFormat.format(number).toString() + ",00"
+        val numberFormat = NumberFormat.getInstance()
+        return numberFormat.format(number).toString() + " Orang"//
     }
 
     private fun ribuan(number : Int): String{
-        val numberFormat = NumberFormat.getInstance()
-        return numberFormat.format(number).toString() + " Orang"
+        val localeID =  Locale("in", "ID")
+        val numberFormat = NumberFormat.getCurrencyInstance(localeID)
+        return numberFormat.format(number).toString()+ ",00"
     }
 
     private fun tanggal(tgl : Any?) : String {
@@ -224,8 +224,8 @@ class UserTourFragment : Fragment(){
                     holder.txName.text = data.get("nama").toString()
                 }
             }
-            holder.txPengunjung.text = ribuan(data.get("pengunjung").toString().toInt())
-            holder.txPendapatan.text = rupiah(data.get("pendapatan"))
+            holder.txPengunjung.text = rupiah(data.get("pendapatan"))
+            holder.txPendapatan.text = ribuan(data.get("pengunjung").toString().toInt())
         }
 
     }

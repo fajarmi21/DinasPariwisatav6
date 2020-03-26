@@ -157,11 +157,13 @@ class AdminDetailSearchFragment : Fragment() {
             progressDialog.isIndeterminate = true
             progressDialog.setMessage("Updating....")
             progressDialog.show()
+            val d = FirebaseAuth.getInstance().currentUser!!.email
 
             db.collection("kegiatan").document(doc.toString()).update(
                     UserDetailListFragment.destin, txspin,
                     UserDetailListFragment.pengunjung, txvisitor,
-                    UserDetailListFragment.pendapatan, arrayListOf(txincome1, txincome2, txincome3)
+                    UserDetailListFragment.pendapatan, arrayListOf(txincome1, txincome2, txincome3),
+                    "updated", d
                 )
                 .addOnSuccessListener {
                     db.collection("kegiatan").document(doc.toString()).get()
