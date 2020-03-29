@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidGradleBuildConfiguration">
-    <option name="SYNC_PROJECT_BEFORE_BUILD" value="true" />
-  </component>
   <component name="AndroidLayouts">
     <shared>
-      <config>
-        <device id="Nexus 6" />
-        <device id="pixel_3a_xl" />
-        <device id="pixel_3_xl" />
-      </config>
+      <config />
     </shared>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b655c055-83e1-467e-8e7f-d2a646739f7a" name="Default Changelist" comment="" />
+    <list default="true" id="3755f01a-c2b0-47e7-808e-75a8e06235e4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,81 +21,21 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Dinas Pariwisata v6" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
+        <projects_view />
       </state>
     </system>
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Dinas Pariwisata v6" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="layoutResourceFile_vertical" />
-        <option value="Kotlin File" />
-        <option value="resourceFile" />
-        <option value="layoutResourceFile" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
-  <component name="ProjectId" id="1Xf3yhz3otx6CBjGQLpv5UzRmZw" />
+  <component name="ProjectId" id="1Zn2LWamjRK93fQp2a1C5NO9Xxg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="cb3d3d4" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-01-23T14:30:49.010Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="android-custom-viewA:/package/kotlin/DinasPariwisatav6/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/Button/CustomCompoundButton.kt_SELECTED" value="CustomCompoundButton" />
-    <property name="android-custom-viewA:/package/kotlin/DinasPariwisatav6/multisearchviewlib/src/main/java/com/iammert/library/ui/multisearchviewlib/MultiSearchView.kt_SELECTED" value="MultiSearchView" />
-    <property name="android.sdk.path" value="B:/installer/SDK/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../(Lib) android arsenal/AndroidViewAnimations-master" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1581424372023" />
-    <property name="multi-representation-previewA:/package/kotlin/DinasPariwisatav6/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/Button/CustomCompoundButton.kt_selected" value="Custom views" />
-    <property name="multi-representation-previewA:/package/kotlin/DinasPariwisatav6/multisearchviewlib/src/main/java/com/iammert/library/ui/multisearchviewlib/MultiSearchView.kt_selected" value="Custom views" />
-    <property name="not.eligible.for.single.variant.sync" value="true" />
-    <property name="project.structure.last.edited" value="Suggestions" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="file.status.colors" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
-  <component name="PsdUISettings">
-    <option name="MODULE_TAB" value="Default Config" />
-    <option name="BUILD_VARIANTS_TAB" value="Build Types" />
-    <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
-    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
-  </component>
-  <component name="RecentsManager">
-    <key name="android.template.-2131393751">
-      <recent name="com.polinema.android.kotlin.dinaspariwisatav6.Super" />
-    </key>
-    <key name="android.template.packageName">
-      <recent name="com.polinema.android.kotlin.dinaspariwisatav6.Super" />
-      <recent name="com.polinema.android.kotlin.dinaspariwisatav6.User" />
-      <recent name="com.polinema.android.kotlin.dinaspariwisatav6.Admin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="A:\package\kotlin\DinasPariwisatav6\app\src\main\assets" />
-      <recent name="A:\package\kotlin\DinasPariwisatav6\app\src\main\res\drawable-ldpi" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -184,110 +114,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b655c055-83e1-467e-8e7f-d2a646739f7a" name="Default Changelist" comment="" />
-      <created>1574066926918</created>
+      <changelist id="3755f01a-c2b0-47e7-808e-75a8e06235e4" name="Default Changelist" comment="" />
+      <created>1585460482039</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574066926918</updated>
+      <updated>1585460482039</updated>
     </task>
     <servers />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="361" y="90" key="#Notifications" timestamp="1584775388093">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="361" y="90" key="#Notifications/0.0.1536.864@0.0.1536.864" timestamp="1584775388093" />
-    <state x="368" y="224" key="#PSD" timestamp="1585145967631">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="368" y="224" key="#PSD/0.0.1536.864@0.0.1536.864" timestamp="1585145967631" />
-    <state x="552" y="147" key="#com.intellij.ide.util.MemberChooser" timestamp="1585251215895">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="552" y="147" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1585251215895" />
-    <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585249536808">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1585249536808" />
-    <state x="535" y="0" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1585119102646">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="535" y="0" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1585119102646" />
-    <state x="400" y="333" key="AndroidCreateResourceFileDialog" timestamp="1585245153042">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="400" y="333" key="AndroidCreateResourceFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1585245153042" />
-    <state x="628" y="275" key="AndroidCreateXmlResourceDialog" timestamp="1584846899700">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="628" y="275" key="AndroidCreateXmlResourceDialog/0.0.1536.864@0.0.1536.864" timestamp="1584846899700" />
-    <state x="624" y="190" key="AndroidProcessChooserDialog" timestamp="1584340928922">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="624" y="190" key="AndroidProcessChooserDialog/0.0.1536.864@0.0.1536.864" timestamp="1584340928922" />
-    <state x="549" y="186" key="FileChooserDialogImpl" timestamp="1585248343967">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585248343967" />
-    <state width="1491" height="199" key="GridCell.Tab.0.bottom" timestamp="1585250909825">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1491" height="199" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585250909825" />
-    <state width="1491" height="199" key="GridCell.Tab.0.center" timestamp="1585250909825">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1491" height="199" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1585250909825" />
-    <state width="1491" height="199" key="GridCell.Tab.0.left" timestamp="1585250909824">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1491" height="199" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1585250909824" />
-    <state width="1491" height="199" key="GridCell.Tab.0.right" timestamp="1585250909825">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1491" height="199" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585250909825" />
-    <state width="1491" height="254" key="GridCell.Tab.1.bottom" timestamp="1585118980942">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1491" height="254" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585118980942" />
-    <state width="1491" height="254" key="GridCell.Tab.1.center" timestamp="1585118980942">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1491" height="254" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1585118980942" />
-    <state width="1491" height="254" key="GridCell.Tab.1.left" timestamp="1585118980942">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1491" height="254" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1585118980942" />
-    <state width="1491" height="254" key="GridCell.Tab.1.right" timestamp="1585118980942">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1491" height="254" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1585118980942" />
-    <state x="349" y="174" key="IDE.errors.dialog" timestamp="1584687466057">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="349" y="174" key="IDE.errors.dialog/0.0.1536.864@0.0.1536.864" timestamp="1584687466057" />
-    <state x="234" y="37" key="SettingsEditor" timestamp="1584776067663">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="234" y="37" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1584776067663" />
-    <state x="93" y="93" width="1350" height="678" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1584552668756">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="93" y="93" width="1350" height="678" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.864@0.0.1536.864" timestamp="1584552668756" />
-    <state x="465" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1581424621106">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="465" y="255" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1581424621106" />
-    <state x="563" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584775939205">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="563" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1584775939205" />
-    <state x="510" y="75" key="refactoring.ChangeSignatureDialog" timestamp="1584776349563">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="510" y="75" key="refactoring.ChangeSignatureDialog/0.0.1536.864@0.0.1536.864" timestamp="1584776349563" />
-    <state x="425" y="197" key="run.anything.popup" timestamp="1584319670551">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1584319670551" />
   </component>
 </project>

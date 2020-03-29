@@ -1786,6 +1786,8 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id LLCenter
+id LLNum
 id LLPengunjungE
 id LLSF
 id LLspin
@@ -1793,7 +1795,6 @@ id META
 id MonthF
 id PilihVid
 id PilihVidDU
-id RLPSF
 id RL_header
 id RLs_header
 id RLs_headerT
@@ -1955,22 +1956,10 @@ id contentSC
 id contentU
 id content_avatar
 id content_avatar_title
-id content_deadline_badge
-id content_deadline_date
-id content_deadline_time
-id content_delivery_date
-id content_delivery_date_badge
-id content_delivery_time
-id content_from_address_1
-id content_from_address_2
-id content_from_badge
 id content_name_view
 id content_rating_stars
 id content_request_btn
 id content_request_btn2
-id content_to_address_1
-id content_to_address_2
-id content_to_badge
 id coordinator
 id custom
 id customPanel
@@ -2252,6 +2241,7 @@ id rounded
 id row_index_key
 id rvAdminUpload
 id rvFilter
+id rvSF
 id rvSuperChart
 id rvUserLog
 id rvUserLogA
@@ -2390,6 +2380,10 @@ id tx3SFC
 id txAPendapatan
 id txAPengunjung
 id txATour
+id txCellNo
+id txCellPengunjungD
+id txCellPengunjungL
+id txCellPengunjungT
 id txDate
 id txDateSF
 id txDetailA
@@ -2406,6 +2400,7 @@ id txEvent
 id txEventAD
 id txEventSD
 id txForm
+id txHeaderCell
 id txIm1
 id txIm1DS
 id txIm1DU
@@ -2651,6 +2646,8 @@ layout item_admin_search
 layout item_admin_upload
 layout item_admin_user
 layout item_super_filter
+layout item_super_filter_cell
+layout item_super_filter_cell_header
 layout item_super_tour
 layout item_super_upload
 layout item_super_user

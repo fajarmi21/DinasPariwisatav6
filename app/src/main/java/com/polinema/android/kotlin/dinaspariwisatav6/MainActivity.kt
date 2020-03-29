@@ -1,14 +1,16 @@
 package com.polinema.android.kotlin.dinaspariwisatav6
 
+import android.Manifest
 import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.kotlinpermissions.KotlinPermissions
 import com.polinema.android.kotlin.dinaspariwisatav6.Admin.AdminMain
 import com.polinema.android.kotlin.dinaspariwisatav6.Super.SuperDashboard
 import com.polinema.android.kotlin.dinaspariwisatav6.User.UserMain
@@ -89,7 +91,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onStart() {
         super.onStart()
-//        setupPermissions()
+        setupPermissions()
         val currentUser = auth.currentUser
         if (currentUser != null) {
             updateUI()
@@ -97,6 +99,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setupPermissions() {
+        KotlinPermissions.with(this)
+            .permissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            .onAccepted { permissions ->
+                Toast.makeText(this, "permission accepted", Toast.LENGTH_LONG).show()
+            }
+            .onDenied { permissions ->
+                Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show()
+            }
+            .onForeverDenied { permissions ->
+                Toast.makeText(this, "permission forever denied", Toast.LENGTH_LONG).show()
+            }
+            .ask()
     }
 
     private fun updateUI() {

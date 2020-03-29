@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- TITLE PART -->
@@ -169,7 +169,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="gone"
+        tools:visibility="visible">
         <!-- content header line -->
         <RelativeLayout
             android:layout_width="match_parent"
@@ -378,211 +379,274 @@
                 android:src="@color/contentDividerLine" />
 
             <!-- addresses part -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:baselineAligned="false"-->
+<!--                android:orientation="horizontal">-->
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1">-->
 
-                    <TextView
-                        android:id="@+id/content_from_badge"
-                        style="@style/ContentMainBadgeTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:text="@string/from_badge" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_from_badge"-->
+<!--                        style="@style/ContentMainBadgeTitle"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentLeft="true"-->
+<!--                        android:layout_alignParentStart="true"-->
+<!--                        android:text="@string/from_badge" />-->
 
-                    <TextView
-                        android:id="@+id/content_from_address_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/content_from_badge"
-                        android:layout_alignStart="@id/content_from_badge"
-                        android:layout_below="@id/content_from_badge"
-                        android:text="@string/content_from1_mock"
-                        android:textColor="@color/mainTextColor"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_from_address_1"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignLeft="@id/content_from_badge"-->
+<!--                        android:layout_alignStart="@id/content_from_badge"-->
+<!--                        android:layout_below="@id/content_from_badge"-->
+<!--                        android:text="@string/content_from1_mock"-->
+<!--                        android:textColor="@color/mainTextColor"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
 
-                    <TextView
-                        android:id="@+id/content_from_address_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/content_from_address_1"
-                        android:layout_alignStart="@id/content_from_address_1"
-                        android:layout_below="@id/content_from_address_1"
-                        android:text="@string/content_from2_mock"
-                        android:textColor="@color/mainTextColor"
-                        android:textSize="14sp" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_from_address_2"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignLeft="@id/content_from_address_1"-->
+<!--                        android:layout_alignStart="@id/content_from_address_1"-->
+<!--                        android:layout_below="@id/content_from_address_1"-->
+<!--                        android:text="@string/content_from2_mock"-->
+<!--                        android:textColor="@color/mainTextColor"-->
+<!--                        android:textSize="14sp" />-->
 
-                </RelativeLayout>
+<!--                </RelativeLayout>-->
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1">-->
 
-                    <TextView
-                        android:id="@+id/content_to_badge"
-                        style="@style/ContentMainBadgeTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:text="@string/to_badge" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_to_badge"-->
+<!--                        style="@style/ContentMainBadgeTitle"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentLeft="true"-->
+<!--                        android:layout_alignParentStart="true"-->
+<!--                        android:text="@string/to_badge" />-->
 
-                    <TextView
-                        android:id="@+id/content_to_address_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/content_to_badge"
-                        android:layout_alignStart="@id/content_to_badge"
-                        android:layout_below="@id/content_to_badge"
-                        android:text="@string/content_to1_mock"
-                        android:textColor="@color/mainTextColor"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_to_address_1"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignLeft="@id/content_to_badge"-->
+<!--                        android:layout_alignStart="@id/content_to_badge"-->
+<!--                        android:layout_below="@id/content_to_badge"-->
+<!--                        android:text="@string/content_to1_mock"-->
+<!--                        android:textColor="@color/mainTextColor"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
 
-                    <TextView
-                        android:id="@+id/content_to_address_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/content_to_address_1"
-                        android:layout_alignStart="@id/content_to_address_1"
-                        android:layout_below="@id/content_to_address_1"
-                        android:text="@string/content_to2_mock"
-                        android:textColor="@color/mainTextColor"
-                        android:textSize="14sp" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_to_address_2"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignLeft="@id/content_to_address_1"-->
+<!--                        android:layout_alignStart="@id/content_to_address_1"-->
+<!--                        android:layout_below="@id/content_to_address_1"-->
+<!--                        android:text="@string/content_to2_mock"-->
+<!--                        android:textColor="@color/mainTextColor"-->
+<!--                        android:textSize="14sp" />-->
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/arrow" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentEnd="true"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/arrow" />-->
 
-                </RelativeLayout>
+<!--                </RelativeLayout>-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
             <!-- divider line -->
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="6dp"
-                android:layout_marginTop="7dp"
-                android:src="@color/contentDividerLine" />
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginBottom="6dp"-->
+<!--                android:layout_marginTop="7dp"-->
+<!--                android:src="@color/contentDividerLine" />-->
 
             <!-- dates part -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:baselineAligned="false"-->
+<!--                android:orientation="horizontal">-->
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1">-->
 
-                    <TextView
-                        android:id="@+id/content_delivery_date_badge"
-                        style="@style/ContentMainBadgeTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:text="@string/delivery_date_badge" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_delivery_date_badge"-->
+<!--                        style="@style/ContentMainBadgeTitle"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentLeft="true"-->
+<!--                        android:layout_alignParentStart="true"-->
+<!--                        android:text="@string/delivery_date_badge" />-->
 
-                    <TextView
-                        android:id="@+id/content_delivery_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/content_delivery_date_badge"
-                        android:layout_alignStart="@id/content_delivery_date_badge"
-                        android:layout_below="@id/content_delivery_date_badge"
-                        android:text="@string/delivery_time_mock"
-                        android:textColor="@color/mainTextColor"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_delivery_time"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignLeft="@id/content_delivery_date_badge"-->
+<!--                        android:layout_alignStart="@id/content_delivery_date_badge"-->
+<!--                        android:layout_below="@id/content_delivery_date_badge"-->
+<!--                        android:text="@string/delivery_time_mock"-->
+<!--                        android:textColor="@color/mainTextColor"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
 
-                    <TextView
-                        android:id="@+id/content_delivery_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/content_delivery_time"
-                        android:layout_alignStart="@id/content_delivery_time"
-                        android:layout_below="@id/content_delivery_time"
-                        android:text="@string/delivery_date_mock"
-                        android:textColor="@color/mainTextColor"
-                        android:textSize="14sp" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_delivery_date"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignLeft="@id/content_delivery_time"-->
+<!--                        android:layout_alignStart="@id/content_delivery_time"-->
+<!--                        android:layout_below="@id/content_delivery_time"-->
+<!--                        android:text="@string/delivery_date_mock"-->
+<!--                        android:textColor="@color/mainTextColor"-->
+<!--                        android:textSize="14sp" />-->
 
-                </RelativeLayout>
+<!--                </RelativeLayout>-->
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1">-->
 
-                    <TextView
-                        android:id="@+id/content_deadline_badge"
-                        style="@style/ContentMainBadgeTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:text="@string/deadline_badge" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_deadline_badge"-->
+<!--                        style="@style/ContentMainBadgeTitle"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignParentLeft="true"-->
+<!--                        android:layout_alignParentStart="true"-->
+<!--                        android:text="@string/deadline_badge" />-->
 
-                    <TextView
-                        android:id="@+id/content_deadline_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/content_deadline_badge"
-                        android:layout_alignStart="@id/content_deadline_badge"
-                        android:layout_below="@id/content_deadline_badge"
-                        android:text="@string/deadline_time_mock"
-                        android:textColor="@color/mainTextColor"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_deadline_time"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignLeft="@id/content_deadline_badge"-->
+<!--                        android:layout_alignStart="@id/content_deadline_badge"-->
+<!--                        android:layout_below="@id/content_deadline_badge"-->
+<!--                        android:text="@string/deadline_time_mock"-->
+<!--                        android:textColor="@color/mainTextColor"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
 
-                    <TextView
-                        android:id="@+id/content_deadline_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/content_deadline_time"
-                        android:layout_alignStart="@id/content_deadline_time"
-                        android:layout_below="@id/content_deadline_time"
-                        android:text=""
-                        android:textColor="@color/mainTextColor"
-                        android:textSize="14sp" />
-                </RelativeLayout>
+<!--                    <TextView-->
+<!--                        android:id="@+id/content_deadline_date"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_alignLeft="@id/content_deadline_time"-->
+<!--                        android:layout_alignStart="@id/content_deadline_time"-->
+<!--                        android:layout_below="@id/content_deadline_time"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/mainTextColor"-->
+<!--                        android:textSize="14sp" />-->
+<!--                </RelativeLayout>-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
             <!-- divider line -->
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="6dp"
-                android:layout_marginTop="7dp"
-                android:src="@color/contentDividerLine" />
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_marginBottom="6dp"-->
+<!--                android:layout_marginTop="7dp"-->
+<!--                android:src="@color/contentDividerLine" />-->
 
             <!-- list part -->
-            <androidx.core.widget.NestedScrollView
+            <LinearLayout
+                android:id="@+id/LLCenter"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RelativeLayout
-                    android:id="@+id/RLPSF"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/LLNum"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </androidx.core.widget.NestedScrollView>
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="4">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/border2">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:textAlignment="center"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/border2">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Local"
+                            android:textAlignment="center"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/border2">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Manca"
+                            android:textAlignment="center"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/border2">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textAlignment="center"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
 
             <!-- request button -->
             <LinearLayout

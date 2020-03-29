@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/xml-apis-1.0.b2.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/xml-apis-1.0.b2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

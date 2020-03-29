@@ -66,6 +66,7 @@ dependencies {
     implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
     implementation 'com.rany.albeg.wein:spring-fab-menu:1.0.1'
     implementation 'com.nex3z:toggle-button-group:1.2.0'
-    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.easing:library:2.1@aar'
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    implementation 'ru.superjob:kotlin-permissions:1.0.3'
 }
