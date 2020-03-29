@@ -21,9 +21,22 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,6 +49,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android-custom-viewA:/package/kotlin/DinasPariwisatav6/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/Button/CustomCompoundButton.kt_SELECTED" value="CustomCompoundButton" />
+    <property name="multi-representation-previewA:/package/kotlin/DinasPariwisatav6/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/Button/CustomCompoundButton.kt_selected" value="Custom views" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -121,5 +140,60 @@
       <updated>1585460482039</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="286" y="163" key="#PSD" timestamp="1585475185685">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="286" y="163" key="#PSD/0.0.1536.864@0.0.1536.864" timestamp="1585475185685" />
+    <state width="1491" height="202" key="GridCell.Tab.0.bottom" timestamp="1585514532600">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1491" height="202" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585514532600" />
+    <state width="1491" height="202" key="GridCell.Tab.0.center" timestamp="1585514532600">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1491" height="202" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1585514532600" />
+    <state width="1491" height="202" key="GridCell.Tab.0.left" timestamp="1585514532600">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1491" height="202" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1585514532600" />
+    <state width="1491" height="202" key="GridCell.Tab.0.right" timestamp="1585514532600">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1491" height="202" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585514532600" />
+    <state x="349" y="174" key="IDE.errors.dialog" timestamp="1585480866121">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="349" y="174" key="IDE.errors.dialog/0.0.1536.864@0.0.1536.864" timestamp="1585480866121" />
+    <state x="277" y="74" key="SettingsEditor" timestamp="1585475589577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="277" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1585475589577" />
+    <state x="431" y="181" key="search.everywhere.popup" timestamp="1585486743027">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1585486743027" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/SuperFilterExcel.kt</url>
+          <line>72</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/SuperFilterExcel.kt</url>
+          <line>130</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/SuperFilterExcel.kt</url>
+          <line>200</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

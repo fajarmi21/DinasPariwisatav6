@@ -31,7 +31,10 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.polinema.android.kotlin.dinaspariwisatav6.R
+import com.polinema.android.kotlin.dinaspariwisatav6.Super.SuperFilterExcel.excel
 import kotlinx.android.synthetic.main.activity_super_filter.*
+import org.apache.poi.ss.usermodel.CellStyle.*
+import org.apache.poi.ss.util.CellRangeAddress
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
 import java.io.File
 import java.io.FileOutputStream
@@ -88,7 +91,7 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
         super.onStart()
 //        check()
         spin()
-        excell()
+        excel()
 //        radio()
     }
 
@@ -102,11 +105,119 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
         val file = File(folder, fileName)
         try {
             file.createNewFile()
-        } catch (e : Exception) {
-            Log.e("e", e.message)
-        }
+        } catch (e : Exception) { Log.e("e", e.message) }
         val fileOutputStream = FileOutputStream(file)
         val wb= XSSFWorkbook()
+        val sh = wb.createSheet("sheet1")
+        sh.setColumnWidth(1, 4*256)
+        sh.setColumnWidth(5, 10*256)
+
+        try {
+            sh.addMergedRegion(CellRangeAddress.valueOf("B2:F3"))
+            val font = wb.createFont().apply {
+                fontName = "Courier New"
+                italic = false
+                bold = true
+            }
+            val style = wb.createCellStyle().apply {
+                alignment = ALIGN_CENTER
+                wrapText = true
+                setFont(font)
+            }
+            val kop = sh.createRow(1).createCell(1)
+            kop.cellStyle = style
+            kop.setCellValue("Dinas Kebudayaan, Pariwisata, Kepemudaan dan Olahraga Kota Kediri")
+
+            try {
+                sh.addMergedRegion(CellRangeAddress.valueOf("B5:B6"))
+                sh.addMergedRegion(CellRangeAddress.valueOf("C5:E5"))
+                sh.addMergedRegion(CellRangeAddress.valueOf("F5:F6"))
+                sh.addMergedRegion(CellRangeAddress.valueOf("B9:D9"))
+
+                val f1 = wb.createFont().apply { bold = true }
+                val f2 = wb.createFont().apply { italic = true }
+                val st1 = wb.createCellStyle().apply {
+                    alignment = ALIGN_CENTER
+                    verticalAlignment = VERTICAL_CENTER
+                    borderLeft = BORDER_THIN
+                    borderTop = BORDER_THIN
+                    borderRight = BORDER_THIN
+                    borderBottom = BORDER_THIN
+                }
+                val st2 = wb.createCellStyle().apply {
+                    alignment = ALIGN_RIGHT
+                    setFont(f2)
+                    borderLeft = BORDER_THIN
+                    borderTop = BORDER_THIN
+                    borderRight = BORDER_THIN
+                    borderBottom = BORDER_THIN
+                }
+                val st3 = wb.createCellStyle().apply {
+                    borderLeft = BORDER_THIN
+                    borderTop = BORDER_THIN
+                    borderRight = BORDER_THIN
+                    borderBottom = BORDER_THIN
+                }
+
+                for (x in 4..8) {
+                    val z = sh.createRow(x)
+                    for (y in 1..5) {
+                        val v = z.createCell(y)
+                        val cs = wb.createCellStyle()
+                        cs.setBorderLeft(BORDER_THIN)
+                        cs.setBorderTop(BORDER_THIN)
+                        cs.setBorderRight(BORDER_THIN)
+                        cs.setBorderBottom(BORDER_THIN)
+                        v.cellStyle = cs
+                        when {
+                            y == 1 && x == 4 -> {
+                                v.setCellValue("No")
+                                cs.alignment = ALIGN_CENTER
+                                cs.verticalAlignment = VERTICAL_CENTER
+                                v.cellStyle = cs
+                            }
+                            y == 2 && x == 4 -> {
+                                v.setCellValue("Pengunjung")
+                                cs.alignment = ALIGN_CENTER
+                                cs.verticalAlignment = VERTICAL_CENTER
+                                v.cellStyle = cs
+                            }
+                            y == 5 && x == 4 -> {
+                                v.setCellValue("Pemasukan")
+                                cs.alignment = ALIGN_CENTER
+                                cs.verticalAlignment = VERTICAL_CENTER
+                                v.cellStyle = cs
+                            }
+                            y == 2 && x == 5 -> {
+                                v.setCellValue("Local")
+                                cs.alignment = ALIGN_CENTER
+                                cs.verticalAlignment = VERTICAL_CENTER
+                                v.cellStyle = cs
+                            }
+                            y == 3 && x == 5 -> {
+                                v.setCellValue("Manca")
+                                cs.alignment = ALIGN_CENTER
+                                cs.verticalAlignment = VERTICAL_CENTER
+                                v.cellStyle = cs
+                            }
+                            y == 4 && x == 5 -> {
+                                v.setCellValue("Total")
+                                cs.alignment = ALIGN_CENTER
+                                cs.verticalAlignment = VERTICAL_CENTER
+                                v.cellStyle = cs
+                            }
+                            y == 1 && x == 8 -> {
+                                v.setCellValue("Total  ")
+                                cs.alignment = ALIGN_CENTER
+                                cs.setFont(f2)
+                                v.cellStyle = cs
+                            }
+                        }
+                    }
+                }
+                Log.e("sukses", "excell")
+            } catch (e : Exception) { Log.e("e2", e.message) }
+        } catch (e : Exception) { Log.e("e3", e.message) }
 
         wb.write(fileOutputStream)
         fileOutputStream.close()

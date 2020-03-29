@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: ./app/libs/geronimo-stax-api_1.0_spec-1.0.jar">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/geronimo-stax-api_1.0_spec-1.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

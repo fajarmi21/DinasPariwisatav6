@@ -25,7 +25,7 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\fajar\.gradle\caches\tra
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\b6138897666926fbd8e0d0d98c87286d\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-firestore:21.4.1] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\f5ac8d2407781656ab3a6b79f1056c08\jetified-firebase-firestore-21.4.1\AndroidManifest.xml:2:1-26:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\2a0d120061063c2e2e9d522bd5e941e9\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\e7b5983081ed2573555126a8d6c91578\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\ec5d94db2a7c9e2ce5878067b46e2bef\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.rany.albeg.wein:spring-fab-menu:1.0.1] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\323b24dc41424fc15755d0f0eceac664\jetified-spring-fab-menu-1.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.daimajia.easing:library:2.1] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\c265789b2de8927a5e04b8d1d9927b9b\jetified-library-2.1\AndroidManifest.xml:2:1-12:12
 MERGED from [com.daimajia.androidanimations:library:2.3] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\cfb2a1490ad968d24139e4a23f342609\jetified-library-2.3\AndroidManifest.xml:2:1-12:12
@@ -250,8 +250,8 @@ MERGED from [com.google.firebase:firebase-firestore:21.4.1] C:\Users\fajar\.grad
 MERGED from [com.google.firebase:firebase-firestore:21.4.1] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\f5ac8d2407781656ab3a6b79f1056c08\jetified-firebase-firestore-21.4.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\2a0d120061063c2e2e9d522bd5e941e9\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\2a0d120061063c2e2e9d522bd5e941e9\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\e7b5983081ed2573555126a8d6c91578\multidex-2.0.0\AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\e7b5983081ed2573555126a8d6c91578\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\ec5d94db2a7c9e2ce5878067b46e2bef\multidex-2.0.1\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\ec5d94db2a7c9e2ce5878067b46e2bef\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [com.rany.albeg.wein:spring-fab-menu:1.0.1] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\323b24dc41424fc15755d0f0eceac664\jetified-spring-fab-menu-1.0.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.rany.albeg.wein:spring-fab-menu:1.0.1] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\323b24dc41424fc15755d0f0eceac664\jetified-spring-fab-menu-1.0.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.daimajia.easing:library:2.1] C:\Users\fajar\.gradle\caches\transforms-2\files-2.1\c265789b2de8927a5e04b8d1d9927b9b\jetified-library-2.1\AndroidManifest.xml:8:5-10:41

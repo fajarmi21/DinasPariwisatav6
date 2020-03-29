@@ -40,11 +40,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                                 db.collection("users")
                                     .document(FirebaseAuth.getInstance().currentUser!!.uid).get()
                                     .addOnSuccessListener {
-                                        if (it["status"].toString() == "Online") {
-                                            progressDialog.hide()
-                                            auth.signOut()
-                                            Toast.makeText(this, "Anda Telah login pada perangkat lain. Coba cek ulang", Toast.LENGTH_LONG).show()
-                                        } else {
+//                                        if (it["status"].toString() == "Online") {
+//                                            progressDialog.hide()
+//                                            auth.signOut()
+//                                            Toast.makeText(this, "Anda Telah login pada perangkat lain. Coba cek ulang", Toast.LENGTH_LONG).show()
+//                                        } else {
                                             val level = it.get("level").toString()
                                             db.collection("users").document(FirebaseAuth.getInstance().currentUser!!.uid)
                                                 .update("status", "Online")
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                                                     startActivity(intent)
                                                 }
                                             }
-                                        }
+//                                        }
                                     }
                                     .addOnFailureListener {
                                         progressDialog.hide()
