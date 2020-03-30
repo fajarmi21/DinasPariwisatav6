@@ -50,11 +50,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android-custom-viewA:/package/kotlin/DinasPariwisatav6/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/Button/CustomCompoundButton.kt_SELECTED" value="CustomCompoundButton" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="multi-representation-previewA:/package/kotlin/DinasPariwisatav6/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/Button/CustomCompoundButton.kt_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\package\kotlin\DinasPariwisatav6\app\src\main\res\layout" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -146,26 +152,30 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="286" y="163" key="#PSD/0.0.1536.864@0.0.1536.864" timestamp="1585475185685" />
-    <state width="1491" height="202" key="GridCell.Tab.0.bottom" timestamp="1585514532600">
+    <state x="624" y="190" key="AndroidProcessChooserDialog" timestamp="1585545954660">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1491" height="202" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585514532600" />
-    <state width="1491" height="202" key="GridCell.Tab.0.center" timestamp="1585514532600">
+    <state x="624" y="190" key="AndroidProcessChooserDialog/0.0.1536.864@0.0.1536.864" timestamp="1585545954660" />
+    <state width="1491" height="202" key="GridCell.Tab.0.bottom" timestamp="1585545712829">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1491" height="202" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1585514532600" />
-    <state width="1491" height="202" key="GridCell.Tab.0.left" timestamp="1585514532600">
+    <state width="1491" height="202" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585545712829" />
+    <state width="1491" height="202" key="GridCell.Tab.0.center" timestamp="1585545712828">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1491" height="202" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1585514532600" />
-    <state width="1491" height="202" key="GridCell.Tab.0.right" timestamp="1585514532600">
+    <state width="1491" height="202" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1585545712828" />
+    <state width="1491" height="202" key="GridCell.Tab.0.left" timestamp="1585545712828">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1491" height="202" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585514532600" />
-    <state x="349" y="174" key="IDE.errors.dialog" timestamp="1585480866121">
+    <state width="1491" height="202" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1585545712828" />
+    <state width="1491" height="202" key="GridCell.Tab.0.right" timestamp="1585545712829">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="349" y="174" key="IDE.errors.dialog/0.0.1536.864@0.0.1536.864" timestamp="1585480866121" />
+    <state width="1491" height="202" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585545712829" />
+    <state x="349" y="174" key="IDE.errors.dialog" timestamp="1585534279558">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="349" y="174" key="IDE.errors.dialog/0.0.1536.864@0.0.1536.864" timestamp="1585534279558" />
     <state x="277" y="74" key="SettingsEditor" timestamp="1585475589577">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -180,17 +190,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/SuperFilterExcel.kt</url>
-          <line>72</line>
+          <line>76</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/SuperFilterExcel.kt</url>
-          <line>130</line>
+          <line>140</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/polinema/android/kotlin/dinaspariwisatav6/Super/SuperFilterExcel.kt</url>
-          <line>200</line>
+          <line>210</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

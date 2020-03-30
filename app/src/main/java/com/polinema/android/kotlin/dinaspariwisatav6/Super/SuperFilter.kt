@@ -91,136 +91,8 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
         super.onStart()
 //        check()
         spin()
-        excel()
+//        excel()
 //        radio()
-    }
-
-    private fun excell() {
-        val time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("ddMMYYY"))
-        val time2 = LocalDateTime.now().format(DateTimeFormatter.ofPattern("Hms"))
-        val fileName = "SuperAdmin$time2.xlsx"
-        val extStorageDirectory = Environment.getExternalStorageDirectory().toString()
-        val folder = File(extStorageDirectory, "Disbudparpora/$time")
-        folder.mkdirs()
-        val file = File(folder, fileName)
-        try {
-            file.createNewFile()
-        } catch (e : Exception) { Log.e("e", e.message) }
-        val fileOutputStream = FileOutputStream(file)
-        val wb= XSSFWorkbook()
-        val sh = wb.createSheet("sheet1")
-        sh.setColumnWidth(1, 4*256)
-        sh.setColumnWidth(5, 10*256)
-
-        try {
-            sh.addMergedRegion(CellRangeAddress.valueOf("B2:F3"))
-            val font = wb.createFont().apply {
-                fontName = "Courier New"
-                italic = false
-                bold = true
-            }
-            val style = wb.createCellStyle().apply {
-                alignment = ALIGN_CENTER
-                wrapText = true
-                setFont(font)
-            }
-            val kop = sh.createRow(1).createCell(1)
-            kop.cellStyle = style
-            kop.setCellValue("Dinas Kebudayaan, Pariwisata, Kepemudaan dan Olahraga Kota Kediri")
-
-            try {
-                sh.addMergedRegion(CellRangeAddress.valueOf("B5:B6"))
-                sh.addMergedRegion(CellRangeAddress.valueOf("C5:E5"))
-                sh.addMergedRegion(CellRangeAddress.valueOf("F5:F6"))
-                sh.addMergedRegion(CellRangeAddress.valueOf("B9:D9"))
-
-                val f1 = wb.createFont().apply { bold = true }
-                val f2 = wb.createFont().apply { italic = true }
-                val st1 = wb.createCellStyle().apply {
-                    alignment = ALIGN_CENTER
-                    verticalAlignment = VERTICAL_CENTER
-                    borderLeft = BORDER_THIN
-                    borderTop = BORDER_THIN
-                    borderRight = BORDER_THIN
-                    borderBottom = BORDER_THIN
-                }
-                val st2 = wb.createCellStyle().apply {
-                    alignment = ALIGN_RIGHT
-                    setFont(f2)
-                    borderLeft = BORDER_THIN
-                    borderTop = BORDER_THIN
-                    borderRight = BORDER_THIN
-                    borderBottom = BORDER_THIN
-                }
-                val st3 = wb.createCellStyle().apply {
-                    borderLeft = BORDER_THIN
-                    borderTop = BORDER_THIN
-                    borderRight = BORDER_THIN
-                    borderBottom = BORDER_THIN
-                }
-
-                for (x in 4..8) {
-                    val z = sh.createRow(x)
-                    for (y in 1..5) {
-                        val v = z.createCell(y)
-                        val cs = wb.createCellStyle()
-                        cs.setBorderLeft(BORDER_THIN)
-                        cs.setBorderTop(BORDER_THIN)
-                        cs.setBorderRight(BORDER_THIN)
-                        cs.setBorderBottom(BORDER_THIN)
-                        v.cellStyle = cs
-                        when {
-                            y == 1 && x == 4 -> {
-                                v.setCellValue("No")
-                                cs.alignment = ALIGN_CENTER
-                                cs.verticalAlignment = VERTICAL_CENTER
-                                v.cellStyle = cs
-                            }
-                            y == 2 && x == 4 -> {
-                                v.setCellValue("Pengunjung")
-                                cs.alignment = ALIGN_CENTER
-                                cs.verticalAlignment = VERTICAL_CENTER
-                                v.cellStyle = cs
-                            }
-                            y == 5 && x == 4 -> {
-                                v.setCellValue("Pemasukan")
-                                cs.alignment = ALIGN_CENTER
-                                cs.verticalAlignment = VERTICAL_CENTER
-                                v.cellStyle = cs
-                            }
-                            y == 2 && x == 5 -> {
-                                v.setCellValue("Local")
-                                cs.alignment = ALIGN_CENTER
-                                cs.verticalAlignment = VERTICAL_CENTER
-                                v.cellStyle = cs
-                            }
-                            y == 3 && x == 5 -> {
-                                v.setCellValue("Manca")
-                                cs.alignment = ALIGN_CENTER
-                                cs.verticalAlignment = VERTICAL_CENTER
-                                v.cellStyle = cs
-                            }
-                            y == 4 && x == 5 -> {
-                                v.setCellValue("Total")
-                                cs.alignment = ALIGN_CENTER
-                                cs.verticalAlignment = VERTICAL_CENTER
-                                v.cellStyle = cs
-                            }
-                            y == 1 && x == 8 -> {
-                                v.setCellValue("Total  ")
-                                cs.alignment = ALIGN_CENTER
-                                cs.setFont(f2)
-                                v.cellStyle = cs
-                            }
-                        }
-                    }
-                }
-                Log.e("sukses", "excell")
-            } catch (e : Exception) { Log.e("e2", e.message) }
-        } catch (e : Exception) { Log.e("e3", e.message) }
-
-        wb.write(fileOutputStream)
-        fileOutputStream.close()
     }
 
     @SuppressLint("ResourceType")
@@ -344,19 +216,57 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
     }
 
     private fun rv() {
-        val hm = HashMap<String, Any>()
-        hm.put("yy", "xx")
-        val x = ArrayList<Item>()
-        x.add(
-            Item(
-                arrayOf(
-                    arrayOf("10", ItemP("1", "100", "200"), ItemP("1", "100", "200")),
-                    arrayOf("11", ItemP("1", "100", "200"), ItemP("1", "100", "200"))
-                )
-            )
-        )
-        rvFilter.layoutManager = LinearLayoutManager(this)
-        rvFilter.adapter = FilterAdapter(x)
+        db.collection("kegiatan").get()
+            .addOnSuccessListener {
+                val x = ArrayList<Item>()
+                val v = ArrayList<Any>()
+                val y = ArrayList<ArrayList<Any>>()
+
+                val a = ArrayList<ArrayList<Any>>()
+                val b = ArrayList<Any>()
+
+                var w = 0
+                val tgl = it.documents[w]["file_tanggal"] as ArrayList<String>
+                var tg = tgl[1]
+                v.add(tg)
+                b.add(tg)
+                var d = 0
+                for (i in it) {
+                    val fp = i["file_pendapatan"] as ArrayList<String>
+//                    var a = 1
+                    val t = i["file_tanggal"] as ArrayList<String>
+                    Log.e("tg", t[1])
+                    if (tg != t[1]) {
+                        tg = t[1]
+                        v.add(tg)
+                    }
+                    v.add(ItemP("1", fp[0],fp[1]))
+                    b.add(SuperFilterExcel.itemP(null, fp[0], fp[1]))
+                    d += (fp[0].toInt()+fp[1].toInt())
+//                    if (tg == t[1]) {
+//                        a++
+//                        v.add(ItemP("1", fp[0],fp[1]))
+//                        b.add(SuperFilterExcel.itemP(null, fp[0], fp[1]))
+//                        d += (fp[0].toInt()+fp[1].toInt())
+//                    } else {
+//                        w =+ a
+//                        tg = t[1]
+//                        v.add(tg)
+//                        v.add(ItemP("1", fp[0],fp[1]))
+//                    }
+                    Log.e("tgl", tg)
+                }
+                v.add(ItemF(d.toString()))
+                y.add(v)
+                x.add(Item(y))
+                rvFilter.layoutManager = LinearLayoutManager(this)
+                rvFilter.adapter = FilterAdapter(x)
+
+                a.add(b)
+                sfmFolder.setOnClickListener {
+                    excel(this, a)
+                }
+            }
     }
 
     inner class FilterAdapter(val dataFilter: ArrayList<Item>) :
@@ -366,6 +276,7 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
             val cv2 = v.findViewById<LinearLayout>(R.id.cvItem2)!!
             val llnum = v.findViewById<LinearLayout>(R.id.LLNum)
             val rvSF = v.findViewById<RecyclerView>(R.id.rvSF)
+            val crb = v.findViewById<TextView>(R.id.content_request_btn)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderFilter {
@@ -439,6 +350,8 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
             }
 
             val y = ArrayList<Any>()
+            val a = ArrayList<ArrayList<Any>>()
+            val b = ArrayList<Any>()
             var w = 0
             Log.e("ar1", dataFilter[position].ar1.size.toString())
             for (ar1 in dataFilter[position].ar1) {
@@ -448,13 +361,22 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
                         is String -> {
                             w = 0
                             y.add(ar2)
+                            b.add(ar2)
                         }
                         is ItemP -> {
                             w++
                             y.add(ItemP(w.toString(), ar2.pgD, ar2.pgL))
+                            b.add(SuperFilterExcel.itemP(null, ar2.pgD, ar2.pgL))
+                        }
+                        is ItemF -> {
+                            y.add(ItemF(ar2.f))
                         }
                     }
                 }
+                a.add(b)
+            }
+            holder.crb.setOnClickListener {
+                excel(this@SuperFilter, a)
             }
             holder.rvSF.apply {
                 layoutManager = LinearLayoutManager(this.context)
@@ -468,6 +390,7 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
         companion object {
             private const val ITEM_HEADER = 0
             private const val ITEM_MENU = 1
+            private const val ITEM_FOOTER = 2
         }
 
         class HolderCell(v: View) : RecyclerView.ViewHolder(v) {
@@ -478,9 +401,9 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
 
             fun bindContent(item: ItemP) {
                 no.text = item.no
-                pgD.text = "Rp.${item.pgD}"
-                pgL.text = "Rp.${item.pgL}"
-                pgT.text = "Rp.${item.pgT}"
+                pgD.text = "Rp${item.pgD}"
+                pgL.text = "Rp${item.pgL}"
+                pgT.text = "Rp${item.pgT}"
             }
         }
 
@@ -492,10 +415,19 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
             }
         }
 
+        class MenuFooterHolder(v: View) : RecyclerView.ViewHolder(v) {
+            val itemFooter = v.findViewById(R.id.txCellTotal) as TextView
+
+            fun bindContent(text: ItemF){
+                itemFooter.text = "Rp${text.f}"
+            }
+        }
+
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
             return when(viewType) {
                 ITEM_HEADER -> MenuHeaderHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_super_filter_cell_header, parent, false))
                 ITEM_MENU -> HolderCell(LayoutInflater.from(parent.context).inflate(R.layout.item_super_filter_cell, parent, false))
+                ITEM_FOOTER -> MenuFooterHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_super_filter_cell_footer, parent, false))
                 else -> throw throw IllegalArgumentException("Undefined view type")
             }
         }
@@ -506,6 +438,7 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
             return when (cellFilter[position]) {
                 is String -> ITEM_HEADER
                 is ItemP -> ITEM_MENU
+                is ItemF -> ITEM_FOOTER
                 else -> throw IllegalArgumentException("Undefined view type")
             }
         }
@@ -520,13 +453,19 @@ class SuperFilter : AppCompatActivity(), PrimeDatePickerBottomSheet.OnDayPickedL
                     val itemHolder = holder as HolderCell
                     itemHolder.bindContent(cellFilter[position] as ItemP)
                 }
+                ITEM_FOOTER -> {
+                    Log.e("c", cellFilter[position].toString())
+                    val itemFooter = holder as MenuFooterHolder
+                    itemFooter.bindContent(cellFilter[position] as ItemF)
+                }
                 else -> throw IllegalArgumentException("Undefined view type")
             }
         }
     }
 
-    inner class Item(val ar1: Array<Array<Any>>)
+    inner class Item(val ar1: ArrayList<ArrayList<Any>>)
     inner class ItemP(val no: String, val pgD: String, val pgL: String, val pgT: String = (pgD.toInt() + pgL.toInt()).toString())
+    inner class ItemF(val f: String)
 
     override fun onMultipleDaysPicked(multipleDays: List<PrimeCalendar>) {
         TODO("Not yet implemented")

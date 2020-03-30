@@ -221,6 +221,7 @@
         tools:ignore="MissingClass">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/sfmFolder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:backgroundTint="#D99AC5"

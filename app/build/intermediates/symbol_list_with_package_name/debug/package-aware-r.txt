@@ -2270,6 +2270,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id sfmFolder
 id sfm_3
 id shortcut
 id showCustom
@@ -2384,6 +2385,7 @@ id txCellNo
 id txCellPengunjungD
 id txCellPengunjungL
 id txCellPengunjungT
+id txCellTotal
 id txDate
 id txDateSF
 id txDetailA
@@ -2647,6 +2649,7 @@ layout item_admin_upload
 layout item_admin_user
 layout item_super_filter
 layout item_super_filter_cell
+layout item_super_filter_cell_footer
 layout item_super_filter_cell_header
 layout item_super_tour
 layout item_super_upload

@@ -1,9 +1,13 @@
 package com.polinema.android.kotlin.dinaspariwisatav6.Super
 
+import android.app.ProgressDialog
+import android.content.Context
 import android.os.Environment
 import android.util.Log
+import android.widget.Toast
 import org.apache.poi.ss.usermodel.CellStyle
 import org.apache.poi.ss.usermodel.Font
+import org.apache.poi.ss.usermodel.VerticalAlignment
 import org.apache.poi.ss.util.CellRangeAddress
 import org.apache.poi.ss.util.RegionUtil
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
@@ -13,7 +17,11 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
 object SuperFilterExcel {
-    fun excel() {
+    fun excel(c: Context, ar: ArrayList<ArrayList<Any>>) {
+        val progressDialog = ProgressDialog(c)
+        progressDialog.isIndeterminate = true
+        progressDialog.setMessage("Authenticating....")
+        progressDialog.show()
         try {
             val time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("ddMMYYY"))
             val time2 = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HHms"))
@@ -24,7 +32,11 @@ object SuperFilterExcel {
             val file = File(folder, fileName)
             try {
                 file.createNewFile()
-            } catch (e : Exception) { Log.e("e", e.message) }
+            } catch (e : Exception) {
+                progressDialog.hide()
+                Toast.makeText(c, "Downloading gagal", Toast.LENGTH_SHORT).show()
+                Log.e("e", e.message)
+            }
             val fileOutputStream = FileOutputStream(file)
 
             val wb = XSSFWorkbook()
@@ -52,19 +64,11 @@ object SuperFilterExcel {
                 kop.cellStyle = style
                 kop.setCellValue("Dinas Kebudayaan, Pariwisata, Kepemudaan dan Olahraga Kota Kediri")
                 Log.e("suksesH", "excell")
-            } catch (e: Exception) { Log.e("header", e.message) }
-
-            val ar1 = ArrayList<ArrayList<Any>>()
-            ar1.add(
-                arrayListOf(
-                    "10", itemP(null, "100","200"), itemP(null, "100","200")
-                )
-            )
-            ar1.add(
-                arrayListOf(
-                    "11", itemP(null, "100","200"), itemP(null, "100","200")
-                )
-            )
+            } catch (e: Exception) {
+                progressDialog.hide()
+                Toast.makeText(c, "Downloading gagal", Toast.LENGTH_SHORT).show()
+                Log.e("header", e.message)
+            }
 
             try {
                 var ls = 0
@@ -126,119 +130,149 @@ object SuperFilterExcel {
                         }
                     }
                     Log.e("suksesCH", "excell")
-                } catch (e: Exception) { Log.e("contentH", e.toString()) }
+                } catch (e: Exception) {
+                    progressDialog.hide()
+                    Toast.makeText(c, "Downloading gagal", Toast.LENGTH_SHORT).show()
+                    Log.e("contentH", e.toString())
+                }
 
-                try {
-                    var t1 = 0
-                    var t2 = 0
-//                    var a = -1
-                    var b = 6
-                    ar1.forEach { it1 ->
-                        var w = 0
-//                        var b = a+6
-                        it1.forEach {
-//                            a++
-                            when(it) {
-                                is String -> {
-                                    w = 0
-                                    sh.addMergedRegion(CellRangeAddress.valueOf("B${b+1}:F${b+1}"))
-                                    val r = sh.createRow(b).createCell(1)
-                                    r.setCellValue(" $it")
-                                    r.cellStyle = wb.createCellStyle().apply { setFont(wb.createFont().apply { italic = true }) }
-                                    RegionUtil.setBorderLeft(1,CellRangeAddress.valueOf("B${b+1}:F${b+1}"),sh,wb)
-                                    RegionUtil.setBorderTop(1,CellRangeAddress.valueOf("B${b+1}:F${b+1}"),sh,wb)
-                                    RegionUtil.setBorderRight(1,CellRangeAddress.valueOf("B${b+1}:F${b+1}"),sh,wb)
-                                    RegionUtil.setBorderBottom(1,CellRangeAddress.valueOf("B${b+1}:F${b+1}"),sh,wb)
-                                }
-                                is itemP -> {
-                                    w++
-                                    val r = sh.createRow(b)
-                                    for (i in 1..5) {
-                                        val c = r.createCell(i)
-                                        val cs = wb.createCellStyle()
-                                        cs.borderLeft = CellStyle.BORDER_THIN
-                                        cs.borderTop = CellStyle.BORDER_THIN
-                                        cs.borderRight = CellStyle.BORDER_THIN
-                                        cs.borderBottom = CellStyle.BORDER_THIN
-                                        when(i) {
-                                            1 -> {
-                                                c.setCellValue("$w")
-                                                cs.alignment = CellStyle.ALIGN_CENTER
-                                                c.cellStyle = cs
-                                            }
-                                            2 -> {
-                                                c.setCellValue("${it.pgD}")
-                                                c.cellStyle = cs
-                                            }
-                                            3 -> {
-                                                c.setCellValue("${it.pgL}")
-                                                c.cellStyle = cs
-                                            }
-                                            4 -> {
-                                                c.setCellValue("${it.pgT}")
-                                                c.cellStyle = cs
-                                                t1 += it.pgT.toInt()
-                                            }
-                                            5 -> {
-                                                c.setCellValue("Rp${it.pgL}")
-                                                c.cellStyle = cs
-                                                t2 += it.pgL.toInt()
+
+                if (ar.size != 0) {
+                    try {
+                        var t1 = 0
+                        var t2 = 0
+                        var b = 6
+                            ar.forEach { it1 ->
+                                var w = 0
+                                it1.forEach {
+                                    when(it) {
+                                        is String -> {
+                                            w = 0
+                                            sh.addMergedRegion(CellRangeAddress.valueOf("B${b+1}:F${b+1}"))
+                                            val r = sh.createRow(b).createCell(1)
+                                            r.setCellValue(" $it")
+                                            r.cellStyle = wb.createCellStyle().apply { setFont(wb.createFont().apply { italic = true }) }
+                                            RegionUtil.setBorderLeft(1,CellRangeAddress.valueOf("B${b+1}:F${b+1}"),sh,wb)
+                                            RegionUtil.setBorderTop(1,CellRangeAddress.valueOf("B${b+1}:F${b+1}"),sh,wb)
+                                            RegionUtil.setBorderRight(1,CellRangeAddress.valueOf("B${b+1}:F${b+1}"),sh,wb)
+                                            RegionUtil.setBorderBottom(1,CellRangeAddress.valueOf("B${b+1}:F${b+1}"),sh,wb)
+                                        }
+                                        is itemP -> {
+                                            w++
+                                            val r = sh.createRow(b)
+                                            for (i in 1..5) {
+                                                val c = r.createCell(i)
+                                                val cs = wb.createCellStyle()
+                                                cs.borderLeft = CellStyle.BORDER_THIN
+                                                cs.borderTop = CellStyle.BORDER_THIN
+                                                cs.borderRight = CellStyle.BORDER_THIN
+                                                cs.borderBottom = CellStyle.BORDER_THIN
+                                                when(i) {
+                                                    1 -> {
+                                                        c.setCellValue("$w")
+                                                        cs.alignment = CellStyle.ALIGN_CENTER
+                                                        c.cellStyle = cs
+                                                    }
+                                                    2 -> {
+                                                        c.setCellValue("${it.pgD}")
+                                                        c.cellStyle = cs
+                                                    }
+                                                    3 -> {
+                                                        c.setCellValue("${it.pgL}")
+                                                        c.cellStyle = cs
+                                                    }
+                                                    4 -> {
+                                                        c.setCellValue("${it.pgT}")
+                                                        c.cellStyle = cs
+                                                        t1 += it.pgT.toInt()
+                                                    }
+                                                    5 -> {
+                                                        c.setCellValue("Rp${it.pgL}")
+                                                        c.cellStyle = cs
+                                                        t2 += it.pgL.toInt()
+                                                    }
+                                                }
                                             }
                                         }
                                     }
+                                    b++
+                                }
+                                ls = b+1
+                            }
+                        tpg = t1
+                        tpd = t2
+                        Log.e("suksesCC", "excell")
+                    } catch (e: Exception) {
+                        progressDialog.hide()
+                        Toast.makeText(c, "Downloading gagal", Toast.LENGTH_SHORT).show()
+                        Log.e("contentC", e.toString())
+                    }
+
+                    try {
+                        sh.addMergedRegion(CellRangeAddress.valueOf("B$ls:D$ls"))
+
+                        val r = sh.createRow(ls-1)
+                        val v = r.createCell(1)
+                        val cs = wb.createCellStyle()
+                        val f = wb.createFont().apply { italic = true }
+                        v.setCellValue("Total  ")
+                        cs.alignment = CellStyle.ALIGN_RIGHT
+                        cs.borderLeft = CellStyle.BORDER_THIN
+                        cs.borderTop = CellStyle.BORDER_THIN
+                        cs.borderRight = CellStyle.BORDER_THIN
+                        cs.setFont(f)
+                        v.cellStyle = cs
+
+                        for (i in 4..5) {
+                            val vi = r.createCell(i)
+                            val ca = wb.createCellStyle()
+                            ca.borderLeft = CellStyle.BORDER_THIN
+                            ca.borderTop = CellStyle.BORDER_THIN
+                            ca.borderRight = CellStyle.BORDER_THIN
+                            when(i) {
+                                4 -> {
+                                    vi.setCellValue("$tpg")
+                                    vi.cellStyle = ca
+                                }
+                                5 -> {
+                                    vi.setCellValue("Rp$tpd")
+                                    vi.cellStyle = ca
                                 }
                             }
-                            b++
                         }
-                        ls = b+1
+                        RegionUtil.setBorderBottom(1,CellRangeAddress.valueOf("B$ls:F$ls"),sh,wb)
+                        Log.e("suksesCF", "excell")
+                    } catch (e: Exception) {
+                        progressDialog.hide()
+                        Toast.makeText(c, "Downloading gagal", Toast.LENGTH_SHORT).show()
+                        Log.e("contentF", e.toString())
                     }
-                    tpg = t1
-                    tpd = t2
-                    Log.e("suksesCC", "excell")
-                } catch (e: Exception) { Log.e("contentC", e.toString()) }
-                Log.e("suksesCC", tpg.toString())
-
-                try {
-                    sh.addMergedRegion(CellRangeAddress.valueOf("B$ls:D$ls"))
-
-                    val r = sh.createRow(ls-1)
-                    val v = r.createCell(1)
+                } else {
+                    sh.addMergedRegion(CellRangeAddress.valueOf("B7:F7"))
                     val cs = wb.createCellStyle()
-                    val f = wb.createFont().apply { italic = true }
-                    v.setCellValue("Total  ")
-                    cs.alignment = CellStyle.ALIGN_RIGHT
-                    cs.borderLeft = CellStyle.BORDER_THIN
-                    cs.borderTop = CellStyle.BORDER_THIN
-                    cs.borderRight = CellStyle.BORDER_THIN
-                    cs.setFont(f)
-                    v.cellStyle = cs
-
-                    for (i in 4..5) {
-                        val vi = r.createCell(i)
-                        val ca = wb.createCellStyle()
-                        ca.borderLeft = CellStyle.BORDER_THIN
-                        ca.borderTop = CellStyle.BORDER_THIN
-                        ca.borderRight = CellStyle.BORDER_THIN
-                        when(i) {
-                            4 -> {
-                                vi.setCellValue("$tpg")
-                                vi.cellStyle = ca
-                            }
-                            5 -> {
-                                vi.setCellValue("Rp$tpd")
-                                vi.cellStyle = ca
-                            }
-                        }
-                    }
-                    RegionUtil.setBorderBottom(1,CellRangeAddress.valueOf("B$ls:F$ls"),sh,wb)
-                    Log.e("suksesCF", "excell")
-                } catch (e: Exception) { Log.e("contentF", e.toString()) }
+                    val c = sh.createRow(6).createCell(6)
+                    c.setCellValue("Data Kosong")
+                    cs.alignment = CellStyle.ALIGN_CENTER
+                    cs.verticalAlignment = CellStyle.VERTICAL_CENTER
+                    cs.setFont(wb.createFont().apply { italic = true })
+                    c.cellStyle = cs
+                    RegionUtil.setBorderLeft(1,CellRangeAddress.valueOf("B7:F7"),sh,wb)
+                    RegionUtil.setBorderTop(1,CellRangeAddress.valueOf("B7:F7"),sh,wb)
+                    RegionUtil.setBorderRight(1,CellRangeAddress.valueOf("B7:F7"),sh,wb)
+                    RegionUtil.setBorderBottom(1,CellRangeAddress.valueOf("B7:F7"),sh,wb)
+                }
                 Log.e("suksesC", "excell")
-            } catch (e: Exception) { Log.e("content", e.toString()) }
+            } catch (e: Exception) {
+                progressDialog.hide()
+                Toast.makeText(c, "Downloading gagal", Toast.LENGTH_SHORT).show()
+                Log.e("content", e.toString())
+            }
 
             wb.write(fileOutputStream)
             fileOutputStream.close()
         } catch (e: Exception) { Log.e("file", e.message) }
+        Toast.makeText(c, "Downloading sukses", Toast.LENGTH_SHORT).show()
+        progressDialog.hide()
     }
 
     class itemP(val no: String?, val pgD: String, val pgL: String, val pgT: String = (pgD.toInt() + pgL.toInt()).toString())
