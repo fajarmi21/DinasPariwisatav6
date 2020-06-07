@@ -1,8 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.rany.albeg.wein:spring-fab-menu:1.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/323b24dc41424fc15755d0f0eceac664/jetified-spring-fab-menu-1.0.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/323b24dc41424fc15755d0f0eceac664/jetified-spring-fab-menu-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/af1d32704e2bbb6e49f51768942089f3/jetified-spring-fab-menu-1.0.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/af1d32704e2bbb6e49f51768942089f3/jetified-spring-fab-menu-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/af1d32704e2bbb6e49f51768942089f3/jetified-spring-fab-menu-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e79efb5e200daa9179b056f121a48bf/jetified-spring-fab-menu-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e79efb5e200daa9179b056f121a48bf/jetified-spring-fab-menu-1.0.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e79efb5e200daa9179b056f121a48bf/jetified-spring-fab-menu-1.0.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rany.albeg.wein/spring-fab-menu/1.0.1/1396a079b87b4ff8defe999c1021fa8a2f346fb7/spring-fab-menu-1.0.1-javadoc.jar!/" />

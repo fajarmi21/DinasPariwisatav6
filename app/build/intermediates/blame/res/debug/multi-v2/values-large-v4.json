@@ -4,7 +4,7 @@
             "outputFile": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\3ce1e0d9605d29b7c280190ba9dc3b02\\appcompat-1.2.0-alpha03\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\41cb31ef5cd736162b40c84ea0b800c2\\appcompat-1.2.0-alpha03\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\ec49bbff4cc867b356f734ea4c629c0a\\material-1.2.0-alpha05\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\dbaa3930a187ae3dbd7ee9e9c9d62edb\\material-1.2.0-alpha05\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

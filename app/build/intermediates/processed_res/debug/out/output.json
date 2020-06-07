@@ -1,28 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
+  "artifactType": {
+    "type": "PROCESSED_RES",
+    "kind": "Directory"
+  },
   "applicationId": "com.polinema.android.kotlin.dinaspariwisatav6",
-  "variantType": "BASE_APK",
+  "variantName": "processDebugResources",
   "elements": [
     {
-      "outputType": {
-        "type": "PROCESSED_RES"
-      },
-      "apkData": {
-        "type": "MAIN",
-        "splits": [],
-        "versionCode": 1,
-        "versionName": "1.0",
-        "outputFile": "app-debug.apk",
-        "fullName": "debug",
-        "baseName": "debug",
-        "dirName": ""
-      },
-      "path": "resources-debug.ap_",
-      "properties": {
-        "packageId": "com.polinema.android.kotlin.dinaspariwisatav6",
-        "split": "",
-        "minSdkVersion": "27"
-      }
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 1,
+      "versionName": "1.0",
+      "outputFile": "resources-debug.ap_"
     }
   ]
 }

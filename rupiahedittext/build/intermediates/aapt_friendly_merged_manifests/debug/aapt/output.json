@@ -1,27 +1,16 @@
 {
-  "version": 1,
+  "version": 2,
+  "artifactType": {
+    "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
+    "kind": "Directory"
+  },
   "applicationId": "id.adiandrea.rupiahedittext",
-  "variantType": "LIBRARY",
+  "variantName": "debug",
   "elements": [
     {
-      "outputType": {
-        "type": "AAPT_FRIENDLY_MERGED_MANIFESTS"
-      },
-      "apkData": {
-        "type": "MAIN",
-        "splits": [],
-        "versionCode": 4,
-        "versionName": "0.0.4",
-        "outputFile": "rupiahedittext-debug.aar",
-        "fullName": "debug",
-        "baseName": "debug",
-        "dirName": ""
-      },
-      "path": "AndroidManifest.xml",
-      "properties": {
-        "packageId": "id.adiandrea.rupiahedittext",
-        "split": ""
-      }
+      "type": "SINGLE",
+      "filters": [],
+      "outputFile": "AndroidManifest.xml"
     }
   ]
 }

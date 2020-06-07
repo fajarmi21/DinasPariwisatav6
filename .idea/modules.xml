@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Dinas_Pariwisata_v6.iml" filepath="$PROJECT_DIR$/.idea/modules/Dinas_Pariwisata_v6.iml" group="Dinas_Pariwisata_v6" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="Dinas Pariwisata v6/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rupiahedittext/rupiahedittext.iml" filepath="$PROJECT_DIR$/.idea/modules/rupiahedittext/rupiahedittext.iml" group="Dinas Pariwisata v6/rupiahedittext" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Dinas_Pariwisata_v6.iml" filepath="$PROJECT_DIR$/.idea/modules/Dinas_Pariwisata_v6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Dinas_Pariwisata_v6.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Dinas_Pariwisata_v6.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rupiahedittext/Dinas_Pariwisata_v6.rupiahedittext.iml" filepath="$PROJECT_DIR$/.idea/modules/rupiahedittext/Dinas_Pariwisata_v6.rupiahedittext.iml" />
     </modules>
   </component>
 </project>

@@ -1,8 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.diegodobelo.expandingview:expanding-view:0.9.4@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/05d16adb53c3b650b978bc08848149a5/jetified-expanding-view-0.9.4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/05d16adb53c3b650b978bc08848149a5/jetified-expanding-view-0.9.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6607fc4bd0fa9313bfd3b9f2e0e2bc7a/jetified-expanding-view-0.9.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6607fc4bd0fa9313bfd3b9f2e0e2bc7a/jetified-expanding-view-0.9.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6607fc4bd0fa9313bfd3b9f2e0e2bc7a/jetified-expanding-view-0.9.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/03ebe44e6cc77d9c557583bc389e7707/jetified-expanding-view-0.9.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/03ebe44e6cc77d9c557583bc389e7707/jetified-expanding-view-0.9.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/03ebe44e6cc77d9c557583bc389e7707/jetified-expanding-view-0.9.4/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diegodobelo.expandingview/expanding-view/0.9.4/79db6ee506e34678df90f8574dea0d747c794cd1/expanding-view-0.9.4-javadoc.jar!/" />

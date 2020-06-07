@@ -1,8 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: ru.superjob:kotlin-permissions:1.0.3@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c032932631122fb0ca6ac2778fd3f2d4/jetified-kotlin-permissions-1.0.3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c032932631122fb0ca6ac2778fd3f2d4/jetified-kotlin-permissions-1.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bd381f065f44f205b4d11ef0997518da/jetified-kotlin-permissions-1.0.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bd381f065f44f205b4d11ef0997518da/jetified-kotlin-permissions-1.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bd381f065f44f205b4d11ef0997518da/jetified-kotlin-permissions-1.0.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d8ccf3c7aa2315bcd3681568d6eb2d62/jetified-kotlin-permissions-1.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d8ccf3c7aa2315bcd3681568d6eb2d62/jetified-kotlin-permissions-1.0.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d8ccf3c7aa2315bcd3681568d6eb2d62/jetified-kotlin-permissions-1.0.3/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

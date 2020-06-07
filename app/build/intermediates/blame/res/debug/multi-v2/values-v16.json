@@ -4,17 +4,7 @@
             "outputFile": "A:\\package\\kotlin\\DinasPariwisatav6\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\06eb29c9779a060495a252041b2497b7\\core-1.3.0-alpha02\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\3ce1e0d9605d29b7c280190ba9dc3b02\\appcompat-1.2.0-alpha03\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\41cb31ef5cd736162b40c84ea0b800c2\\appcompat-1.2.0-alpha03\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\fajar\\.gradle\\caches\\transforms-2\\files-2.1\\bdf0d9d8eb336a23da7669442486a322\\core-1.3.0-alpha02\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]
