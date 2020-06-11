@@ -7,6 +7,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/86afc7197d137a19cb21cc30c586f99b/jetified-library-2.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/86afc7197d137a19cb21cc30c586f99b/jetified-library-2.3/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/86afc7197d137a19cb21cc30c586f99b/jetified-library-2.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0df4543d4510ce36adf3ceaef68216ee/jetified-library-2.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0df4543d4510ce36adf3ceaef68216ee/jetified-library-2.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0df4543d4510ce36adf3ceaef68216ee/jetified-library-2.3/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.daimajia.androidanimations/library/2.3/aac86728e46f018c3bcfc88c90b703f17f8fda52/library-2.3-javadoc.jar!/" />
