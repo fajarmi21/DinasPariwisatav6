@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.cottacush:CurrencyEditText:0.0.6@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eda1a432d395e455190939ec8c2c3735/jetified-CurrencyEditText-0.0.6/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eda1a432d395e455190939ec8c2c3735/jetified-CurrencyEditText-0.0.6/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eda1a432d395e455190939ec8c2c3735/jetified-CurrencyEditText-0.0.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba4983693c66fcfec5aeac8595f355e4/jetified-CurrencyEditText-0.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba4983693c66fcfec5aeac8595f355e4/jetified-CurrencyEditText-0.0.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba4983693c66fcfec5aeac8595f355e4/jetified-CurrencyEditText-0.0.6/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.cottacush/CurrencyEditText/0.0.6/240de86601a7c540a6521bfc61ff2e5295a61590/CurrencyEditText-0.0.6-javadoc.jar!/" />
